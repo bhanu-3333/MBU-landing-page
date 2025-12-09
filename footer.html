@@ -90,20 +90,46 @@
       font-size: 14px;
     }
 
-    /* ===== MOBILE ===== */
     @media (max-width: 768px) {
-      .mbuHeroImg {
-        height: 300px;
-      }
 
-      .mbuHeroTitle {
-        font-size: 1.5rem;
-      }
+  .mbuHeroImg {
+    height: 260px;
+  }
 
-      .mbuMobileCenter {
-        text-align: center;
-      }
-    }
+  .mbuHeroTitle {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .mbuHeroBtn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  /* ✅ LOGO SMALLER */
+  .mbuMobileCenter img {
+    width: 170px !important;
+  }
+
+  /* ✅ CONTACT STACK UNDER LOGO */
+  .mbuContactStrip .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mbuContactItem {
+    justify-content: center;
+    margin-left: 0;   /* ✅ remove desktop offset */
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .mbuContactIcon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
   </style>
 </head>
 
