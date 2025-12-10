@@ -257,12 +257,13 @@ html, body {
     padding: 80px 60px;
   }
   .ranking-strip {
-    width: 94%;
+    width: 64%;
     margin: 0 auto;
     bottom: 0;
     font-size: 16px;
     padding: 16px;
     text-align: center;
+    bottom: 60px;
   }
 
   .ranking-strip .row {
@@ -312,12 +313,19 @@ html, body {
   }
   .container,
   .container-fluid {
+   
+   margin-bottom: 0px;
     width: 100% !important;
     max-width: 100% !important;
     overflow-x: hidden !important;
   }
+  .mbu-box{
+    margin-top: 60px;
+   
+  }
   .choose{
-    margin-left: 100px;
+    margin-left: 66px;
+    
   }
 
 }
@@ -554,6 +562,10 @@ html, body {
         position:static;
         margin:8px auto;
         width:80%;
+      }
+      .programs-section{
+        margin-left: 0px;
+      
       }
     }
 
@@ -1132,6 +1144,7 @@ html, body {
       .faq-body{font-size:14px;padding:16px 18px;}
     }
 
+    
       .mbuHeroWrap {
       position: relative;
       border-radius: 25px;
@@ -1344,31 +1357,33 @@ html, body {
       margin-bottom: 40px;
 
     }
+@media (max-width: 768px) {
 
-    /* ✅ MOBILE RESPONSIVE */
-    @media (max-width: 768px) {
-      .video-overlay-text {
-        font-size: 20px;
-        bottom: 15px;
-      }
+  .video-overlay-text {
+    font-size: 20px;
+    bottom: 15px;
+  }
 
-      .steps-wrapper {
-        gap: 6px;
-      }
+  /* ✅ FORCE VERTICAL STACKING */
+  .steps-wrapper {
+    flex-direction: column;   /* ✅ Makes steps vertical */
+    align-items: center;
+  }
 
-      .step-box {
-        width: 120px;
-      }
+  .step-box {
+    width: 100%;
+    max-width: 260px;
+  }
 
-      .arrow-img {
-        display: none;
-      }
-      
-.step-box p{
-  font-size:16px;
+  .arrow-img {
+    display: none;  /* ✅ Hide arrows on mobile */
+  }
 
+  .step-box p {
+    font-size: 16px;
+  }
 }
-    }
+
   </style>
 </head>
 
@@ -1457,7 +1472,7 @@ html, body {
 
 
 
-<section class="container">
+<section class="container mbu-box">
   <small class="choose" >WHY CHOOSE US <img src="./image/object.png" class="object-img1"></small>
   <div class="row align-items-center mt-2">
     <div class="col-lg-6">
