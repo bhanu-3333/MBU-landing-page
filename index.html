@@ -614,9 +614,11 @@ border-radius: 10px 10px 0 0;
 }
 
 .placement-section .placement-wrapper {
-  margin-bottom: 0 px;
+  
   position: relative;
-  bottom: 0 px;
+   margin-top: 0 !important;        /* ensure no extra top margin */
+  padding-top: 12px !important;    /* reduce top padding (was large) */
+  padding-bottom: 18px !important;
  
 }
 
@@ -671,11 +673,12 @@ border-radius: 10px 10px 0 0;
   background: #ffffff;
   border-radius: 22px;
   padding: 40px;
-  margin-top: 20px;
+  margin-top: 8px;
   border: 1px solid #d9d9d9;
   overflow: hidden;
   height: 245px;
   width: 100%;
+   padding-top: 28px; 
   max-width: 900px;
   margin-left: 65px; /* Move right */
 }
@@ -784,11 +787,11 @@ border-radius: 10px 10px 0 0;
 
 /* STATS BOX */
 .placement-section .stats-box {
-  margin-top: 25px;
+  margin-top: 12px;
   background: #d62828;
   color: #ffffff;
   border-radius: 18px;
-  padding: 30px 10px;
+  padding: 20px 10px;
   width: 100%;
   max-width: 900px;
   margin-left: 65px; /* align with testimonial card */
@@ -817,7 +820,16 @@ border-radius: 10px 10px 0 0;
   margin: 0 auto;
 }
 
+.campus-wrapper {
+  margin-bottom: 24px !important;  /* previously large — reduce to ~24px */
+}
 
+/* Clean up invalid declarations so browser doesn't ignore them */
+.placement-section .placement-wrapper,
+.placement-section .placement-wrapper {
+  margin-bottom: 0 !important;
+  bottom: 0 !important;
+}
 
 @media (max-width: 768px) {
   .placement-section .stats-box .col-md-3 {
@@ -908,15 +920,23 @@ border-radius: 10px 10px 0 0;
 
   .placement-section .stats-box {
     padding: 20px 10px;
+  
     
   }
 
   .placement-section .stats-title {
-    font-size: 20px;
+    font-size: 30px;
+
   }
 }
+@media (max-width: 991.98px) {
+  .marquee-btm { margin-bottom: 6px !important; }
+  .placement-section .placement-wrapper { padding-top: 12px !important; }
+  .placement-section .testimonial-card { margin-top: 6px !important; }
+  .placement-section .stats-box { margin-top: 20px !important; }
+}
   .marquee-btm{
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   }        
   .marquee {
   margin-top: 0px;  
