@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
     body {
@@ -28,7 +27,7 @@
 .hero-section {
 background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),url("./image/campus.png") center/cover no-repeat;
 border-radius: 0 0 90px 90px;
-padding:220px 0px 200px 220px ;
+padding:240px 0px 200px 240px ;
 color: white;
 position: relative;
 z-index: 1;            
@@ -893,7 +892,6 @@ border-radius: 10px 10px 0 0;
 
 @media (max-width: 767.98px) {
 
-
       .placement-circle{
         display: none;
     }
@@ -1318,11 +1316,21 @@ border-radius: 10px 10px 0 0;
       
     }
     .mbuFooterBar {
-      background: #D71921;
-      color: white;
-      text-align: center;
-      padding: 12px 10px;
-      font-size: 14px;
+    position: relative;              /* keeps it in normal flow */
+  left: 50%;                       /* move to center reference */
+  right: 50%;
+  margin-left: -50vw;              /* pull left edge to viewport left */
+  margin-right: -50vw;             /* pull right edge to viewport right */
+  width: 100vw;                    /* fill viewport width (safe now) */
+  box-sizing: border-box;          /* include padding in width */
+  padding: 17px 19px;
+  background: #D71921;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  z-index: 50;
+  /* optional: prevent horizontal scrollbar artifacts */
+  overflow-x: hidden;
     }
  @media (max-width: 768px) {
 
@@ -1489,9 +1497,49 @@ border-radius: 10px 10px 0 0;
 }
 
   </style>
+
+  <!-- ======= Minimal Zoom-Safe Overrides (conservative) ======= -->
+  <style>
+/* Purpose: neutralize the main fixed left offsets so the whole page centers when zoomed out,
+   while preserving alignment rules that define the look. */
+
+/* Center the whole page visually without changing your exact widths/heights */
+body > .page-center-wrap { max-width: 1400px; margin: 0 auto; position: relative; }
+
+/* Keep navbar visually centered while preserving its original dimensions */
+.navbar {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Prevent the heavy left-margin on ranking-strip from pushing content right at wide viewports */
+.ranking-strip {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Make main container elements respect centered page */
+.container, .container-fluid, .mbu-box, .programs-section, .campus-wrapper, .placement-wrapper {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+}
+
+/* Keep hero form aligned inside its column (don't override hero padding to avoid layout shifts) */
+.hero-form { margin-right: 260px; }
+
+/* Ensure marquee and track don't create extra horizontal overflow when zooming */
+.marquee, .marquee .track { max-width: 100%; box-sizing: border-box; }
+
+/* Final safety: avoid horizontal scroll due to tiny rounding at extreme zooms */
+html, body { overflow-x: hidden; min-width: 320px; }
+  </style>
 </head>
 
 <body>
+  <!-- Wrap everything so minimal centering rules can apply without changing your markup -->
+  <div class="page-center-wrap">
+
   <!-- nav chnages -->
 <nav class=" navbar navbar-expand-lg d-flex justify-content-between align-items-center">
  
@@ -2201,11 +2249,12 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
 <div class="mbuFooterBar">
   © 2025 Mohan Babu University (MBU). All Rights Reserved.
 </div>
+
+  </div> <!-- /.page-center-wrap -->
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-
 
  <script>
   (function($){
@@ -2225,6 +2274,7 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
       // (Works if your buttons use data-target OR aria-controls)
       function findToggleButtonByCollapse($collapse) {
         var id = $collapse.attr('id');
+        if (!id) return $(); // return empty jQuery if no id
         return $('[data-target="#'+id+'"], [data-bs-target="#'+id+'"], [aria-controls="'+id+'"]');
       }
 
@@ -2232,43 +2282,71 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
       $('.collapse').each(function(){
         var $c = $(this);
         var $btn = findToggleButtonByCollapse($c);
+
         if($c.hasClass('show')){
-          $btn.removeClass('collapsed');
-          $btn.find('.icon-minus').removeClass('icon-minus').addClass('icon-plus');
+          if ($btn && $btn.length) {
+            $btn.removeClass('collapsed');
+            var $iconMinus = $btn.find('.icon-minus');
+            if ($iconMinus && $iconMinus.length) {
+              $iconMinus.removeClass('icon-minus').addClass('icon-plus');
+            }
+          }
         } else {
-          $btn.addClass('collapsed');
-          $btn.find('.icon-plus').removeClass('icon-plus').addClass('icon-minus');
+          if ($btn && $btn.length) {
+            $btn.addClass('collapsed');
+            var $iconPlus = $btn.find('.icon-plus');
+            if ($iconPlus && $iconPlus.length) {
+              $iconPlus.removeClass('icon-plus').addClass('icon-minus');
+            }
+          }
         }
       });
 
       // When any collapse shows, update its button icon
-      $('.collapse').on('show.bs.collapse', function(){
+      $(document).on('show.bs.collapse', '.collapse', function(){
         var $btn = findToggleButtonByCollapse($(this));
-        $btn.removeClass('collapsed');
-        $btn.find('.icon-minus').removeClass('icon-minus').addClass('icon-plus');
+        if ($btn && $btn.length) {
+          $btn.removeClass('collapsed');
+          var $iconMinus = $btn.find('.icon-minus');
+          if ($iconMinus && $iconMinus.length) {
+            $iconMinus.removeClass('icon-minus').addClass('icon-plus');
+          }
+        }
       });
 
       // When any collapse hides, update its button icon
-      $('.collapse').on('hide.bs.collapse', function(){
+      $(document).on('hide.bs.collapse', '.collapse', function(){
         var $btn = findToggleButtonByCollapse($(this));
-        $btn.addClass('collapsed');
-        $btn.find('.icon-plus').removeClass('icon-plus').addClass('icon-minus');
+        if ($btn && $btn.length) {
+          $btn.addClass('collapsed');
+          var $iconPlus = $btn.find('.icon-plus');
+          if ($iconPlus && $iconPlus.length) {
+            $iconPlus.removeClass('icon-plus').addClass('icon-minus');
+          }
+        }
       });
 
       // ---------- FAQ: arrow image + button color sync ----------
       function syncFaqVisuals() {
         $('.faq-accordion .collapse').each(function(){
           var id = $(this).attr('id');
+          if (!id) return;
           var $btn = $('[data-target="#'+id+'"], [data-bs-target="#'+id+'"], [aria-controls="'+id+'"]');
+          if(!$btn || !$btn.length) return;
+
           if($(this).hasClass('show')){
             $btn.removeClass('collapsed');
-            $btn.find('.faq-arrow')
-                .css({'background-image':'url("./image/drop1.png")','transform':'rotate(180deg)'});
+            var $arrow = $btn.find('.faq-arrow');
+            if ($arrow && $arrow.length) {
+              $arrow.css({'background-image':'url("./image/drop1.png")','transform':'rotate(180deg)'});
+            }
             $btn.css({'background':'#D71921','color':'#fff'});
           } else {
             $btn.addClass('collapsed');
-            $btn.find('.faq-arrow')
-                .css({'background-image':'url("./image/drop2.png")','transform':'rotate(0deg)'});
+            var $arrow2 = $btn.find('.faq-arrow');
+            if ($arrow2 && $arrow2.length) {
+              $arrow2.css({'background-image':'url("./image/drop2.png")','transform':'rotate(0deg)'});
+            }
             $btn.css({'background':'#F6C617','color':'#000'});
           }
         });
@@ -2278,18 +2356,29 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
       syncFaqVisuals();
 
       // update when show/hide fires for FAQ items
-      $('.faq-accordion .collapse').on('show.bs.collapse', function(){
+      $(document).on('show.bs.collapse', '.faq-accordion .collapse', function(){
         var id = $(this).attr('id');
+        if (!id) return;
         var $btn = $('[data-target="#'+id+'"], [data-bs-target="#'+id+'"], [aria-controls="'+id+'"]');
+        if (!$btn || !$btn.length) return;
         $btn.removeClass('collapsed');
-        $btn.find('.faq-arrow').css({'background-image':'url("./image/drop1.png")','transform':'rotate(180deg)'});
+        var $arrow = $btn.find('.faq-arrow');
+        if ($arrow && $arrow.length) {
+          $arrow.css({'background-image':'url("./image/drop1.png")','transform':'rotate(180deg)'});
+        }
         $btn.css({'background':'#D71921','color':'#fff'});
       });
-      $('.faq-accordion .collapse').on('hide.bs.collapse', function(){
+
+      $(document).on('hide.bs.collapse', '.faq-accordion .collapse', function(){
         var id = $(this).attr('id');
+        if (!id) return;
         var $btn = $('[data-target="#'+id+'"], [data-bs-target="#'+id+'"], [aria-controls="'+id+'"]');
+        if (!$btn || !$btn.length) return;
         $btn.addClass('collapsed');
-        $btn.find('.faq-arrow').css({'background-image':'url("./image/drop2.png")','transform':'rotate(0deg)'});
+        var $arrow = $btn.find('.faq-arrow');
+        if ($arrow && $arrow.length) {
+          $arrow.css({'background-image':'url("./image/drop2.png")','transform':'rotate(0deg)'});
+        }
         $btn.css({'background':'#F6C617','color':'#000'});
       });
 
@@ -2304,7 +2393,12 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
         }
         if(target){
           // toggle collapse via BS4
-          $(target).collapse('toggle');
+          try {
+            $(target).collapse('toggle');
+          } catch (err) {
+            // if collapse toggle fails (invalid target), just ignore to prevent JS error
+            // console.warn('Collapse toggle failed for', target, err);
+          }
         }
         // don't prevent default — let BS handle ARIA and focus
       });
@@ -2316,6 +2410,3 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
 
 </body>
 </html>
-
-
-
