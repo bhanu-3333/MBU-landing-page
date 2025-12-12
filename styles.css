@@ -382,7 +382,7 @@ html, body {
     }
     .programs-title{
       color:#ffffff;
-      font-size:2rem;
+      font-size:40px;
       margin-top:6px;
     }
     .programs-image{
@@ -481,8 +481,15 @@ border-radius: 10px 10px 0 0;
       object-fit:cover;
       position: relative;
       right: 30%;
+      margin-top: 30px;
       
     }
+
+   .about-section {
+    margin-top: 100px;   /* ⬅ adds space above the section */
+    margin-bottom: 10px;
+}
+
     .about-text-block{
       max-width:700px;
     }
@@ -496,8 +503,8 @@ border-radius: 10px 10px 0 0;
       
     }
     .about-title{
-      font-size:2.2rem;
-      line-height:1.25;
+      font-size:40px;
+      line-height:51.35px;
       font-family:"Roboto Flex",sans-serif;
     }
     .about-para{
@@ -508,10 +515,14 @@ border-radius: 10px 10px 0 0;
       margin-bottom:1rem;
       margin-top: 40px;
     }
-    .collab-section{
-      background:#F3F3F3;
-      padding-top:80px;
-    }
+  .collab-section {
+  background:#F3F3F3;
+  padding-top:70px; 
+width: 108%;
+position: relative;
+right: 60px;
+
+  }
     .collab-label{
       font-family:"Roboto Flex",sans-serif;
       font-weight:500;
@@ -553,22 +564,54 @@ border-radius: 10px 10px 0 0;
       transform:translate(-50%,-50%);
       border-radius:50%;
     }
-    .logo-card{
-      position:absolute;
-      background:#ffffff;
-      width:192px;
-      height:87px;
-      border-radius:10px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      box-shadow:0 10px 25px rgba(0,0,0,.06);
-    }
-    .logo-card img{
-      max-width:100%;
-      max-height:60px;
-      object-fit:contain;
-    }
+.logo-card {
+  position: absolute;
+  background: #ffffff;
+  width: 192px;
+  height: 87px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,.06);
+  overflow: hidden; /* ensures smooth swap */
+  position: absolute;
+}
+
+/* Both images MUST stay in the same position */
+.logo-card img {
+  position: absolute;       /* keeps both images stacked */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+  transition: opacity 0.25s ease;
+}
+
+/* Gray visible by default */
+.logo-card img.gray {
+  opacity: 1;
+}
+
+/* Color hidden by default */
+.logo-card img.color {
+  opacity: 0;
+}
+
+/* Hover swap — NO movement */
+.logo-card:hover img.gray {
+  opacity: 0;
+}
+
+.logo-card:hover img.color {
+  opacity: 1;
+}
+
+
+
+
     .logo-pos-1{top:17%;left:7%;}
     .logo-pos-2{top:50%;left:-3%;}
     .logo-pos-3{top:78%;left:7%;}
@@ -606,7 +649,7 @@ border-radius: 10px 10px 0 0;
 
 
 .placement-section {
-  background: #fafafa;
+  
   font-family: "Plus Jakarta Sans", sans-serif;
    
 }
@@ -621,16 +664,8 @@ border-radius: 10px 10px 0 0;
  
 }
 
-/* Right side grey circle */
-.placement-section .placement-circle {
-  position: absolute;
-  right: 10px;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: #d9d9d9;
-  z-index: 0;
-}
+
+
 
 /* Heading */
 .placement-section .placement-tag {
@@ -1043,7 +1078,9 @@ border-radius: 10px 10px 0 0;
       color: white;
       position: relative;
       z-index: 1;
-      overflow: visible; /* ✅ allows images to overflow */
+      overflow: visible;
+      width:1216px;
+      right:100px; /* ✅ allows images to overflow */
     }
 
     .campus-img-row {
@@ -1179,7 +1216,7 @@ border-radius: 10px 10px 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 10px 10px 0 0;     /* top corners rounded only */
+  border-radius: 10px 10px 10px 10px;     /* top corners rounded only */
   transition: background .2s, color .2s;
   border: none;              /* remove dividing border */
   width: 100%;
@@ -1438,8 +1475,8 @@ border-radius: 10px 10px 0 0;
 }
 
 .step-box img {
-  width: 60px;          
-  height: 60px;          
+  width: 111px;          
+  height: 106px;          
   object-fit: contain;
 
   background: #D71921;  
