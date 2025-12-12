@@ -4,1548 +4,16 @@
   <meta charset="UTF-8">
   <title>MBU University</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
-    body {
-      background: #f8f9fa;
-      font-family: "Roboto Flex", sans-serif;
-    }
-    
-   .navbar {
-  width: 1104px;
-  height: 99px;
-  padding: 0px 48px 0px 48px ;
-  border-radius: 8px;
-  margin:20px 0px 20px 220px ;
-  background: white;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  position: relative;   
-  z-index: 9999;  
-}
 
-.hero-section {
-background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),url("./image/campus.png") center/cover no-repeat;
-border-radius: 0 0 90px 90px;
-padding:240px 0px 200px 240px ;
-color: white;
-position: relative;
-z-index: 1;            
-bottom: 140px; 
-right:64px ; 
-width: 109%;
- 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-}
-.hero-badge {
-      background: #ffc107;
-      color: black;
-      padding: 8px 18px;
-      border-radius: 5px;
-      font-size: 14px;
-      font-weight:600;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-.hero-form {
-      background: rgba(255, 255, 255, 0.562);
-      backdrop-filter: blur(10px);
-      width: 340px;
-      height: 320px;
-      margin-right: 260px;
-      border-radius: 20px;
-    }
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
 
-    .ranking-strip {
-      background: #ffc107;
-      border: solid white 10px;
-      border-radius: 10px;
-      padding: 32px;
-     width: 1120px;
-      position: relative;
-      z-index: 9999;
-      bottom: 180px;
-      margin-left: 210px;
-     font-weight: 500;
-     font-size: 27px;
-     line-height: 36px;
-     text-align:start;
-    }
-    .ranking-strip img {
-      background-color: white;
-      width: 166px;
-      height: 85px;
-      border-radius: 5px;
-    }
+  <!-- YOUR custom CSS -->
+  <link rel="stylesheet" href="styles.css">
 
-  .rank-icon {
-  width: 120px;
-  height: 74px;
-  object-fit: contain;  
-}
-   .feature-card {
-  background: #e7e7e7dd;
-  padding: 18px;
-  border-radius: 13px;
-  border: 1.86px #d9d9d9;
-  margin-bottom: 20px;
-}
-.feature-card p{
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 18px;
-}
-.feature-card img {
-  width: 40px;
-  margin-right: 12px;
-}
-
-.feature-card h6 {
-  margin-bottom: 4px;
-}
-
-.feature-card > img,
-.feature-card > h6 {
-  display: inline-block;
-  vertical-align: middle;
-}
-    .leader-img {
-      max-width: 300px;
-      border-radius: 20px;
-    }
-.badge-years {
-  background: #C7080F;
-  color: white;
- width: 165px;
- height: 86px;
-  border-radius: 17.12px;
-  padding-left: 20px;
-  padding-top: 15px;
-  position: absolute;
-  bottom: -15px;
-  left: 60%;
-  transform: translateX(-50%);
-  text-align: center;
-  line-height: 1;
-}
-
-.object-img1{
-  width: 20px;
-  height: 17px;
-}
-
-.badge-exp {
-  font-size: 35px;   
-  font-weight: 500;
-  display: block;
-  text-align: start;   
-}
-
-.badge-text {
-  margin-top: 6px;
-  font-size: 14px;  
-  font-weight: 300;
-  display: block;
-  letter-spacing: 0.5px;
-  text-align: start;
-}
-
-    .object-img {
-  width: 26px;      
-  height: 26px;
-  vertical-align: middle;
- 
-}
-.content{
-    font-size: 60px;
-    line-height: 67.3px;
-}
-
-.lorem{
-    color: #FFFFFF;
-    font-weight: 100;
-    line-height: 30px;
-    font-size: 16px;
-}
-.text-content{
-    color: black;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 51.35px;
-}
-.choose{
-  letter-spacing: 2.03px;
-  font-family: "Roboto Flex";
-  font-size: 20.28px;
-  font-weight: 600;
-}
-.container{
-  width: 1050px;
-  margin-bottom: 100px;/*add margin*/
-  position: relative;
-  bottom: 40px;
-}
-
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
-}
-@media (max-width: 768px) {
-
-  .navbar {
-    width: 95%;
-    margin: 12px auto;
-    padding: 10px 14px;
-  }
-
-  .navbar img {
-    height: 42px;
-  }
-
-  .navbar-toggler {
-    border: none;
-    font-size: 28px;
-    background: none;
-  }
-
-  .navbar-collapse {
-    background: white;
-    border-radius: 14px;
-    margin-top: 12px;
-    padding: 14px 0;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-  }
-
-  .navbar-nav {
-    text-align: center;
-  }
-
-  .nav-link {
-    font-size: 18px;
-    padding: 12px 0;
-  }
-  .hero-section {
-    padding-top: 140px;
-    padding-bottom: 110px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 0;
-    bottom: 0;
-    min-height: 100vh;
-    left:0px;
-  }
-
-  .hero-badge {
-    text-align: center;
-    display: block;
-    margin: 0 auto 18px auto;
-    font-size: 13px;
-  }
-
-  .content {
-    font-size: 34px;
-    line-height: 42px;
-    text-align: center;
-  }
-  .object-img {
-    width: 26px;
-    height: 26px;
-  }
-  .lorem {
-    font-size: 14px;
-    line-height: 22px;
-    text-align: center;
-  }
-  .hero-form {
-    width: 100%;
-    height: auto;
-    margin: 32px auto 0 auto;
-    padding: 80px 60px;
-  }
-  .ranking-strip {
-    width: 64%;
-    margin: 0 auto;
-    bottom: 0;
-    font-size: 16px;
-    padding: 16px;
-    text-align: center;
-    bottom: 60px;
-  }
-
-  .ranking-strip .row {
-    gap: 10px;
-  }
-.object-img1{
-  width: 15px;
-  height: 15px;
-}
-  .ranking-strip img,
-  .rank-icon {
-    width: 82px;
-    height: auto;
-  }
-  .text-content {
-    font-size: 26px;
-    line-height: 34px;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  .text-dark-emphasis {
-    text-align: center;
-    font-size: 14px;
-    padding: 0 8px;
-  }
-  .feature-card {
-    padding: 16px;
-    margin-bottom: 16px;
-  }
-
-  .feature-card img {
-    width: 34px;
-  }
-
-  .feature-card h6 {
-    font-size: 16px;
-  }
-
-  .feature-card p {
-    font-size: 13px;
-    line-height: 18px;
-  }
-  .leader-img,
-  .badge-years {
-    margin-bottom: 30px;
-  }
-  .container,
-  .container-fluid {
-   
-   margin-bottom: 0px;
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-  }
-  .mbu-box{
-    margin-top: 60px;
-   
-  }
-  .choose{
-    margin-left: 66px;
-    
-  }
-
-}
-@media (max-width: 400px) {
-
-  .content {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  .lorem {
-    font-size: 13px;
-  }
-
-  .nav-link {
-    font-size: 16px;
-  }
-
-  .ranking-strip img {
-    width: 70px;
-  }
-}
-
-
-.programs-section{
-      max-width:1400px;
-    margin-left: 64px;
-    margin-bottom: 50px;
-      padding:40px 24px;
-      border-radius:28px;
-      color:#fff;
-      background-image:url("./image/background.png");
-      background-size:cover;
-      background-position:center;
-      overflow:hidden;
-      min-height:670px;
-    }
-
-.programs-inner {
-  max-width: 1100px;            /* extend width */
-  margin: 18px auto;           /* center */
-  border-radius: 14px;         /* light curve */
-  padding: 20px;
-  background: #ffffff;
-}
-
-.programs-inner .row.g-4 {
-  align-items: center;
-}
-    .programs-label{
-      letter-spacing:2px;
-      font-size:.85rem;
-      text-transform:uppercase;
-      color:#ffffff;
-      opacity:.95;
-      font-family:"Plus Jakarta Sans",sans-serif;
-    }
-    .programs-title{
-      color:#ffffff;
-      font-size:2rem;
-      margin-top:6px;
-    }
-    .programs-image{
-      width:95%;
-      height:400px;
-      object-fit:cover;
-      border-radius:18px;
-    }
-    .programs-right{
-      max-height:390px;
-      overflow-y:auto;
-      padding-right:6px;
-    }
-    .programs-right::-webkit-scrollbar{
-      width:8px;
-    }
-    .programs-right::-webkit-scrollbar-track{
-      background:#e6e6e6;
-      border-radius:10px;
-    }
-    .programs-right::-webkit-scrollbar-thumb{
-      background:#ffde59;
-      border-radius:10px;
-    }
-
-.programs-inner .accordion .accordion-item {
-  background: #fff;
-  border: 0;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 12px;
-
- 
-}
-
-  .programs-inner .accordion-button {
-  width: 100%;
-  padding: 12px 18px;
-border-radius: 10px 10px 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #F6C617; /* closed state default */
-  border: 0;
-  box-shadow: none;
-}
-
-.programs-inner .accordion-button.collapsed {
-  background:#E4E4E4;
-  color: #000;
-  font-size: 20px;
-  font-weight: 500x;
-}
-
-    .accordion-button:not(.collapsed){
-      background:#ffde59!important;
-      color:#000!important;
-      font-size: 20px;
-  font: weight 500px;
-    }
-    .accordion-button::after{
-      display:none!important;
-    }
-    .icon-plus::before{
-      content:"+";
-      font-size:34px;
-    }
-    .icon-minus::before{
-      content:"–";
-      font-size:34px;
-    }
- .programs-inner .accordion-body {
-  background:#FFF7DA;
-  padding: 14px 18px 18px;
-  color: #444;
-  font-size: .95rem;
-  border-radius: 0 0 10px 10px;
-  margin-top: 0px;
-
-}
-.accordion-button:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-
-    .programs-list li{
-      font-family:"Plus Jakarta Sans",sans-serif;
-      color:#727272;
-      font-size:.94rem;
-      margin-bottom:4px;
-    }
-    .about-single-img{
-      width:120%;
-      border-radius:20px;
-      object-fit:cover;
-      position: relative;
-      right: 30%;
-      
-    }
-    .about-text-block{
-      max-width:700px;
-    }
-    .about-label{
-      letter-spacing:2px;
-      font-size:1rem;
-      text-transform:uppercase;
-      font-family:"Plus Jakarta Sans",sans-serif;
-      opacity:.9;
-      
-      
-    }
-    .about-title{
-      font-size:2.2rem;
-      line-height:1.25;
-      font-family:"Roboto Flex",sans-serif;
-    }
-    .about-para{
-      font-size:16px;
-      line-height:25.67px;
-      color:#727272;
-      font-family:"Plus Jakarta Sans",sans-serif;
-      margin-bottom:1rem;
-      margin-top: 40px;
-    }
-    .collab-section{
-      background:#F3F3F3;
-      padding-top:80px;
-    }
-    .collab-label{
-      font-family:"Roboto Flex",sans-serif;
-      font-weight:500;
-      font-size:20.28px;
-      line-height:20.28px;
-      letter-spacing:2.03px;
-      text-transform:uppercase;
-      opacity:.9;
-    }
-    .collab-title{
-      font-family:"Roboto Flex",sans-serif;
-      font-weight:600;
-      font-size:40px;
-      line-height:51.35px;
-      text-align:center;
-      margin:13px 0 30px;
-    }
-    .collab-subtitle{
-      font-family:"Plus Jakarta Sans",sans-serif;
-      font-weight:400;
-      font-size:16px;
-      line-height:25.67px;
-      text-align:center;
-      color:#727272;
-      max-width:831px;
-      margin:10px auto;
-    }
-    .collab-layout{
-      position:relative;
-      max-width:900px;
-      margin:40px auto 0;
-      aspect-ratio:16/9;
-    }
-    .collab-earth{
-      position:absolute;
-      top:50%;
-      left:50%;
-      width:661px;
-      transform:translate(-50%,-50%);
-      border-radius:50%;
-    }
-    .logo-card{
-      position:absolute;
-      background:#ffffff;
-      width:192px;
-      height:87px;
-      border-radius:10px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      box-shadow:0 10px 25px rgba(0,0,0,.06);
-    }
-    .logo-card img{
-      max-width:100%;
-      max-height:60px;
-      object-fit:contain;
-    }
-    .logo-pos-1{top:17%;left:7%;}
-    .logo-pos-2{top:50%;left:-3%;}
-    .logo-pos-3{top:78%;left:7%;}
-    .logo-pos-4{top:17%;right:6%;}
-    .logo-pos-5{top:50%;right:-3%;}
-    .logo-pos-6{top:78%;right:6%;}
-
-    @media (max-width:768px){
-      .programs-title{font-size:1.6rem;}
-      .collab-layout{
-       max-width:100%;
-       aspect-ratio:auto;
-      }
-      .collab-earth{
-        position:static;
-        transform:none;
-        width:220px;
-        margin:0 auto 20px;
-        display:block;
-      }
-      .logo-card{
-        position:static;
-        margin:8px auto;
-        width:80%;
-      }
-      .programs-section{
-        margin-left: 0px;
-      
-      }
-      .accordion-button{
-        margin-top: 10px;
-      }
-   
-    }
-
-
-.placement-section {
-  background: #fafafa;
-  font-family: "Plus Jakarta Sans", sans-serif;
-   
-}
-
-.placement-section .placement-wrapper {
-  
-  position: relative;
-   margin-top: 0 !important;        /* ensure no extra top margin */
-  padding-top: 12px !important;    /* reduce top padding (was large) */
-  padding-bottom: 18px !important;
-  
- 
-}
-
-/* Right side grey circle */
-.placement-section .placement-circle {
-  position: absolute;
-  right: 10px;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: #d9d9d9;
-  z-index: 0;
-}
-
-/* Heading */
-.placement-section .placement-tag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  font-size: 20px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-
-.placement-section .placement-tag-icon {
-  height: 18px;
-}
-
-.placement-section .placement-heading {
-  text-align: center;
-  font-family: "Roboto Flex", sans-serif;
-  font-size: 40px;
-  font-weight: 600;
-  margin-bottom: 40px;
-}
-
-/* LEFT IMAGE */
-.placement-section .placement-img {
-  width: 140%;
-  margin-top: 20px;
-  border-radius: 18px;
-  margin-left: -40px; /* Move slightly left */
-  display: block;
-}
-
-/* TESTIMONIAL CARD */
-.placement-section .testimonial-card {
-  position: relative;
-  background: #ffffff;
-  border-radius: 22px;
-  padding: 40px;
-  margin-top: 8px;
-  border: 1px solid #d9d9d9;
-  overflow: hidden;
-  height: 245px;
-  width: 100%;
-   padding-top: 28px; 
-  max-width: 900px;
-  margin-left: 65px; /* Move right */
-}
-
-/* Yellow background */
-.placement-section .yellow-right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 50%;
-  border-radius: 0 22px 22px 0;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.placement-section .yellow-layer {
-  position: absolute;
-  width: 110%;
-  height: 120%;
-  object-fit: contain;
-}
-
-.placement-section .yellow-layer.light {
-  z-index: 2;
-  right: 10px;
-}
-
-.placement-section .yellow-layer.dark {
-  z-index: 3;
-  left: 10px;
-}
-
-/* Quote Icon */
-.placement-section .quote-bg {
-  position: absolute;
-  top: 50%;
-  left: 35%;
-  width: 200px;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-}
-
-.placement-section .testimonial-body {
-  position: relative;
-  z-index: 4;
-  max-width: 63%;   /* ← FIXED WIDTH */
-}
-
-/* Text */
-.placement-section .testimonial-text {
-  color: #6b6b6b;
-  line-height: 2;
-  font-size: 17px;
-  font-weight: 400;
-  margin-bottom: 18px;
-}
-
-.placement-section .student-name {
-  color: #034833;
-  font-weight: 700;
-  font-size: 22px;
-}
-
-.placement-section .student-role {
-  color: #6b7280;
-  font-size: 14px;
-}
-
-/* Student Photo */
-.placement-section .student-photo {
-  position: absolute;
-  right: 25px;
-  top: 40%;
-  transform: translateY(-50%);
-  width: 160px;
-  height: 160px;
-  border-radius: 79.5px;
-  border: 3px solid #ffffff;
-  z-index: 5;
-  object-fit: cover;
-}
-
-/* Salary Badge */
-.placement-section .salary-badge {
-  position: absolute;
-  right: 25px;
-  bottom: 10px;
-  background: #ffffff;
-  width: 190px;
-  height: 52px;
-  padding: 0 10px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 600;
-  font-size: 14px;
-  z-index: 6;
-}
-
-.placement-section .salary-badge img {
-  width: 101px;
-  height: 27px;
-}
-
-/* STATS BOX */
-.placement-section .stats-box {
-  margin-top: 12px;
-  background: #d62828;
-  color: #ffffff;
-  border-radius: 18px;
-  padding: 20px 10px;
-  width: 100%;
-  max-width: 900px;
-  margin-left: 65px; /* align with testimonial card */
-}
-
-/* Title */
-.placement-section .stats-title {
-  font-size: 42px;
-  font-weight: 700;
-}
-
-/* Paragraph */
-.placement-section .stats-box p {
-  font-size: 13px;
-  font-weight: 400;
-}
-
-.placement-section .stats-box .col-md-3 {
-  flex: 0 0 20%;      /* 5 columns */
-  max-width: 20%;
-}
-
-
-.stats-last-item {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.campus-wrapper {
-  margin-bottom: 24px !important;  /* previously large — reduce to ~24px */
-}
-
-/* Clean up invalid declarations so browser doesn't ignore them */
-.placement-section .placement-wrapper,
-.placement-section .placement-wrapper {
-  margin-bottom: 0 !important;
-  bottom: 0 !important;
-}
-
-@media (max-width: 768px) {
-  .placement-section .stats-box .col-md-3 {
-    flex: 0 0 50%;      /* 2 per row */
-    max-width: 50%;
-  }
-
-  .stats-last-item {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
-    margin-top: 18px;
-  }
-}
-
-.about-single-img{
-      width:120%;
-      margin-left: 130px;
-      position: relative;
-      right: 60%;
-      bottom: 30px;
-      
-}
-@media (max-width: 991.98px) {
-    .placement-circle{
-        display: none;
-    }
-  .placement-section .placement-img {
-    width: 100%;
-    margin-left: 0;
-    
-  }
-  .about-single-img{
-    width: 90%;
-    position: relative;
-    right: 30%;
-    top: 0px;
-  }
-
-  .placement-section .testimonial-card,
-  .placement-section .stats-box {
-    margin-left: 0; /* center on mobile */
-  }
-
-  .placement-section .testimonial-body {
-    max-width: 100%; /* full width on mobile */
-  }
-
-  .placement-section .student-photo {
-    right: 24px;
-    width: 130px;
-    height: 130px;
-  }
-
-  .placement-section .salary-badge {
-    right: 24px;
-  }
-
-  .placement-section .stats-title {
-    font-size: 34px;
-  }
-}
-
-
-@media (max-width: 767.98px) {
-
-      .placement-circle{
-        display: none;
-    }
-
-  .placement-section .yellow-right {
-    display: none;
-  }
-
-  .placement-section .testimonial-card {
-    padding: 30px;
-    height: auto;
-  }
-
-  .placement-section .student-photo {
-    margin-left: 0px;
-    transform: none;
-    margin: 30px auto 30px;
-  }
-
-  .placement-section .salary-badge {
-    position: static;
-   margin-left: 120px;
-  }
-
-  .placement-section .stats-box {
-    padding: 20px 10px;
-  
-    
-  }
-
-  .placement-section .stats-title {
-    font-size: 30px;
-
-  }
-}
-@media (max-width: 991.98px) {
-  .marquee-btm { margin-bottom: 6px !important; }
-  .placement-section .placement-wrapper { padding-top: 30px !important; }
-  .placement-section .testimonial-card { margin-top: 6px !important; }
-  .placement-section .stats-box { margin-top: 20px !important; }
-}
-  .marquee-btm{
-    margin-bottom: 6px;
-  }        
-  .marquee {
-  margin-top: 0px;  
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-.track {
-  display: flex;
-  width: max-content;
-  gap: 14px;
-} /*border chnages*/
-.marquee img {
-  width: 240px;
-  height: 100px;
-  object-fit: contain;
-  background: #FBFBFB;
-  padding: 12px 18px;
-  border: 1px solid #D9D9D9;
-  border-radius: 8px;
-}
-.marquee.left .track {
-  animation: scrollLeft 18s linear infinite;
-}
-.marquee.right .track {
-  animation: scrollRight 18s linear infinite;
-}
-@keyframes scrollLeft {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-33.33%); }
-}
-
-@keyframes scrollRight {
-  from { transform: translateX(-33.33%); }
-  to   { transform: translateX(0); }
-}
-@media (max-width: 768px) {
-  .marquee img {
-    width: 95px;
-    height: 55px;
-  }
-}
-  .mbu-red-box {
-  background: #d71920;
-  border-radius: 28px;
-  padding: 20px 30px 70px;
-}
-
-.mbu-facilities-tag {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #ffffff;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 12px;
-}
-
-.mbu-facilities-heading {
-  font-size: 30px;
-  font-weight: 700;
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.mbu-img-box {
-  border-radius: 18px;
-  overflow: hidden;
-  width: 100%;
-  height: 400px;
-  position: relative;
-  bottom: 60px;
-}
-
-.mbu-img-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .mbu-facilities-heading {
-    font-size: 22px;
-  }
-
-  .mbu-img-box {
-    height: 180px;
-  }
-}
- .campus-wrapper {
-      position: relative;
-      max-width: 1216px;
-      margin-top: 280px;
-      margin-bottom: 260px;
-    }
-
-    .campus-redbox {
-      background:#D71921;
-      height: 440px;
-      border-radius: 16px;
-      padding: 160px 40px;
-      text-align: center;
-      color: white;
-      position: relative;
-      z-index: 1;
-      overflow: visible; /* ✅ allows images to overflow */
-    }
-
-    .campus-img-row {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      z-index: 2;
-    }
-
-    .campus-img-top {
-      top: 0;
-      transform: translateY(-50%);
-    }
-
-    .campus-img-bottom {
-      bottom: 0;
-      transform: translateY(50%);
-    }
-
-    .campus-img {
-      width: 220px;
-      max-width: 289px;
-      height: 280px;
-      object-fit: cover;
-      border-radius: 10px;
-      
-    }
-    .campus-subtitle {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 26px;
-  letter-spacing: 4.03px;
-}
-
-      .object2-img {
-  width: 26px;      
-  height: 26px;
-  vertical-align: middle;
- 
-}
-/*replace*/
-@media (max-width: 768px) {
-
-  .campus-wrapper {
-    margin-top: 140px;
-    margin-bottom: 140px;
-    overflow-x: hidden;
-  }
-
-  /*  Hide the 3rd image */
-  .campus-img-row .col-auto:nth-child(3) {
-    display: none;
-  }
-
-  .campus-img-row {
-    justify-content: center !important;
-    overflow: visible;
-  }
-
-  .campus-img {
-    width: 140px;
-    height: 140px;
-  }
-
-  
-  .campus-img-top {
-    top: -20px;
-    transform: none;
-  }
-
-  .campus-img-bottom {
-    bottom: -20px;
-    transform: none;
-  }
-
-  .campus-redbox {
-    padding: 140px 16px;
-    height: auto;
-  }
-
-  .campus-subtitle {
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 1px;
-  }
-
-  .object2-img {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-
- .faq-section{
-      padding:70px 0;
-      background-color: #F7F7F7;
-    }
-
-    .faq-label{
-      font-family:"Roboto Flex",sans-serif;
-      font-size:20px;
-      letter-spacing:2.03px;
-      text-transform:uppercase;
-      font-weight:500;
-      margin-bottom:16px;
-    }
-
-    .faq-title{
-      font-family:"Roboto Flex",sans-serif;
-      font-size:40px;
-      font-weight:600;
-      margin-bottom:40px;
-    }
-
-   .faq-accordion .accordion-item{
-  border: none !important;
-  background: transparent;
-  overflow: visible;
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto 20px;
-  border-radius: 0; /* remove weird rounded border */
-}
-  .faq-accordion .accordion-button{
-  background: #F6C617;
-  color: #000;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  padding: 10px 18px;
-  min-height: 56px;                 /* exact height you wanted */
-  height: auto;                     /* fixes the box height */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 10px 10px 0 0;     /* top corners rounded only */
-  transition: background .2s, color .2s;
-  border: none;              /* remove dividing border */
-  width: 100%;
-  box-shadow: none;
-  outline: none;
-   position: relative;
-  z-index: 2;
-
-}
-    /* Active (open) state */
-    .faq-accordion .accordion-button:not(.collapsed){
-      background:#D71921!important;
-      color:#fff!important;
-    }
-
-    /* remove bootstrap focus shadow */
-    .faq-accordion .accordion-button:focus,
-    .faq-accordion .accordion-button:active{
-      box-shadow:none!important;
-      outline:none!important;
-    }
-
-    /* Remove default arrow */
-    .faq-accordion .accordion-button::after{
-      display:none!important;
-    }
-
-    /* Custom arrow using background images */
-  .faq-arrow{
-  width:30px;
-  height:30px;
-  margin-left:20px;
-  background-image: url("./image/drop2.png"); /* default arrow when closed */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: transform .25s, background-image .2s;
-  transform: rotate(0deg);
-}
-.faq-accordion .accordion-button:not(.collapsed) {
-  background: #D71921 !important;  /* red when open */
-  color: #fff !important;
-   border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  top: 0.5px;       /* fixes sub-pixel seam on some browsers */
-  z-index: 5;  
-}
-
-.faq-accordion .accordion-button:not(.collapsed) .faq-arrow {
-  background-image: url("./image/drop1.png"); /* arrow for opened state */
-  transform: rotate(180deg);
-}
-    .faq-accordion .accordion-button:not(.collapsed) .faq-arrow{
-      background-image:url("./image/drop1.png");
-      transform:rotate(180deg);
-    }
-
-  .faq-body{
-  background: #FFF7DA;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 16px;
-  padding: 18px 26px;               /* slightly tighter */
-  text-align: left;
-  color: #000;
-  font-weight: 400;
-  border-radius: 0 0 10px 10px;     /* bottom corners rounded only */
-   margin: 0 !important;
-  padding-top: 20px;
-                   /* IMPORTANT — removes gap */
-}
-
-
-    @media (max-width:768px){
-      .faq-title{font-size:30px;}
-      .faq-label{font-size:16px;margin-bottom:8px;}
-      .faq-body{font-size:14px;padding:16px 18px;}
-    }
-
-    
-      .mbuHeroWrap {
-      position: relative;
-      border-radius: 25px;
-      overflow: hidden;
-    }
-
-    .mbuHeroImg {
-      width: 100%;
-      height: 382px;
-      object-fit: cover;
-    }
-
-    .mbuHeroOverlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.071));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      padding: 30px;
-    }
-
-    .mbuHeroTitle {
-      font-weight:600;
-      font-size: 40px;
-      line-height: 51.35px;
-    }
-
-    .mbuHeroBtn {
-      background: #D71921;
-      border: none;
-      font-weight: 500;
-      padding: 10px 25px;
-      margin-top: 15px;
-    } 
-   .mbuContactStrip {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  border-top: 2px solid #F5F5F5; 
-}
-    .mbuContactItem {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      font-weight: 400;
-      font-size: 15px;
-      margin: 10px 0 10px 260px;
-      line-height: 25.24px;
-    }
-
-    .mbuContactIcon {
-      width: 20px;
-      height: 20px;
-      fill: #F6C617;
-      
-    }
- /* Footer: normal centered footer (placed OUTSIDE .page-center-wrap) */
-.mbuFooterBar {
-  width: 100%;               /* fills the page-center width */
-  max-width: 1600px;        /* match your .page-center-wrap max (adjust if you used different) */
-  margin: 24px auto 0;      /* center and add top gap */
-  box-sizing: border-box;
-  padding: 17px 19px;
-  background: #D71921;
-  color: #fff;
-  text-align: center;
-  font-size: 14px;
-  z-index: 10;
-}
-
-
-/* If you want a slightly wider footer on very large screens, raise max-width value above */
-
- @media (max-width: 768px) {
-
-  .mbuHeroImg {
-    height: 260px;
-  }
-
-  .mbuHeroTitle {
-    font-size: 22px;
-    line-height: 30px;
-  }
-
-  .mbuHeroBtn {
-    padding: 8px 20px;
-    font-size: 14px;
-  }
-
-  /*  LOGO SMALLER */
-  .mbuMobileCenter img {
-    width: 170px !important;
-  }
-
-  /* CONTACT STACK UNDER LOGO */
-  .mbuContactStrip .row {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .mbuContactItem {
-    justify-content: center;
-    margin-left: 0;  
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  .mbuContactIcon {
-    width: 18px;
-    height: 18px;
-  }
-}
-       .video-section {
-      position: relative;
-      width: 100%;
-      max-width: 1000px;
-      margin: auto;
-      border-radius: 20px;
-      overflow: hidden;
-      aspect-ratio: 16 / 9;
-      background: #000;
-      margin-top: 140px;
-    }
-
-    .video-section iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    .video-overlay-text {
-      position: absolute;
-      bottom: 25px;
-      left: 50%;
-      transform: translateX(-50%);
-     background: linear-gradient(180deg, #FFFFFF 0%, #FEF3CD 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-      font-size: 67px;
-      font-weight: 500;
-      text-align: center;
-      width: 100%;
-      padding: 0 15px;
-    
-      pointer-events: none;
-    }
-
-    /* ADMISSION SECTION */
-    .admission-title {
-      text-align: center;
-      font-size: 40px;
-      font-weight: 600;
-      line-height: 51px;
-      margin: 60px 0 40px;
-    }
-
-    .steps-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-     /*removed*/
-    }
-
-    .step-box {
-  text-align: center;
-  width: 150px;          
-  height: 180px;         
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.step-box img {
-  width: 60px;          
-  height: 60px;          
-  object-fit: contain;
-
-  background: #D71921;  
-  border: 1.12px solid #000;
-  border-radius: 4.46px;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.step-box h6 {
-  font-size: 22.62px;
-  font-weight: 500;
-  margin-bottom: 20px;
-  letter-spacing: 2.26PX;
-}
-
-.step-box p {
-  font-size: 17.85px;
-  line-height: 21px;
-  font-weight: 600;
-  margin-top:20px;
-  min-height: 32px;
-   /* ✅ Keeps text area equal even if content changes */
-}
-
-
-    .arrow-img {
-      width: 60px;
-      margin-bottom: 40px;
-
-    }
-@media (max-width: 768px) {
-
-  .video-overlay-text {
-    font-size: 20px;
-    bottom: 15px;
-  }
-
-  /* ✅ FORCE VERTICAL STACKING */
-  .steps-wrapper {
-    flex-direction: column;   /*  Makes steps vertical */
-    align-items: center;
-  }
-
-  .step-box {
-    width: 100%;
-    max-width: 260px;
-  }
-
-  .arrow-img {
-    display: none;  /* Hide arrows on mobile */
-  }
-
-  .step-box p {
-    font-size: 16px;
-  }
-}
-
-  </style>
-
-  <!-- ======= Minimal Zoom-Safe Overrides (conservative) ======= -->
-  <style>
-/* Purpose: neutralize the main fixed left offsets so the whole page centers when zoomed out,
-   while preserving alignment rules that define the look. */
-
-/* Center the whole page visually without changing your exact widths/heights */
-body > .page-center-wrap { max-width: 1400px; margin: 0 auto; position: relative; }
-
-/* Keep navbar visually centered while preserving its original dimensions */
-.navbar {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Prevent the heavy left-margin on ranking-strip from pushing content right at wide viewports */
-.ranking-strip {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Make main container elements respect centered page */
-.container, .container-fluid, .mbu-box, .programs-section, .campus-wrapper, .placement-wrapper {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  box-sizing: border-box;
-}
-
-/* Keep hero form aligned inside its column (don't override hero padding to avoid layout shifts) */
-.hero-form { margin-right: 260px; }
-
-/* Ensure marquee and track don't create extra horizontal overflow when zooming */
-.marquee, .marquee .track { max-width: 100%; box-sizing: border-box; }
-
-/* Final safety: avoid horizontal scroll due to tiny rounding at extreme zooms */
-html, body { overflow-x: hidden; min-width: 320px; }
-  </style>
 </head>
 
 <body>
@@ -1556,7 +24,7 @@ html, body { overflow-x: hidden; min-width: 320px; }
 <nav class=" navbar navbar-expand-lg d-flex justify-content-between align-items-center">
  
   <div class="d-flex align-items-center gap-2">
-    <img src="./image/logo.png" height="88">
+    <img src="./image/logo.webp" height="88">
   </div>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mbuMenu">
     ☰
@@ -1580,9 +48,9 @@ html, body { overflow-x: hidden; min-width: 320px; }
         <h1 class="content">
   Pursue Your Passions<br>
   Dream 
-  <img src="./image/object.png" class="object-img"> 
+  <img src="./image/object.webp" class="object-img"> 
   Believe 
-  <img src="./image/object.png" class="object-img"> 
+  <img src="./image/object.webp" class="object-img"> 
   Achieve
 </h1>
 <p class="lorem mt-3">
@@ -1610,22 +78,22 @@ html, body { overflow-x: hidden; min-width: 320px; }
         <div class="track">
 
           <!-- SET 1 -->
-          <img src="./image/img1.png" class="rank-icon">
-          <img src="./image/img2.png" class="rank-icon">
-          <img src="./image/img3.png" class="rank-icon">
-          <img src="./image/img4.png" class="rank-icon">
+          <img src="./image/img1.webp" class="rank-icon">
+          <img src="./image/img2.webp" class="rank-icon">
+          <img src="./image/img3.webp" class="rank-icon">
+          <img src="./image/img4.webp" class="rank-icon">
 
           <!-- SET 2 (DUPLICATE) -->
-          <img src="./image/img1.png" class="rank-icon">
-          <img src="./image/img2.png" class="rank-icon">
-          <img src="./image/img3.png" class="rank-icon">
-          <img src="./image/img4.png" class="rank-icon">
+          <img src="./image/img1.webp" class="rank-icon">
+          <img src="./image/img2.webp" class="rank-icon">
+          <img src="./image/img3.webp" class="rank-icon">
+          <img src="./image/img4.webp" class="rank-icon">
 
           <!-- SET 3 (EXTRA SAFE) -->
-          <img src="./image/img1.png" class="rank-icon">
-          <img src="./image/img2.png" class="rank-icon">
-          <img src="./image/img3.png" class="rank-icon">
-          <img src="./image/img4.png" class="rank-icon">
+          <img src="./image/img1.webp" class="rank-icon">
+          <img src="./image/img2.webp" class="rank-icon">
+          <img src="./image/img3.webp" class="rank-icon">
+          <img src="./image/img4.webp" class="rank-icon">
 
         </div>
       </div>
@@ -1637,7 +105,7 @@ html, body { overflow-x: hidden; min-width: 320px; }
 
 
 <section class="container mbu-box">
-  <small class="choose" >WHY CHOOSE US <img src="./image/object.png" class="object-img1"></small>
+  <small class="choose" >WHY CHOOSE US <img src="./image/object.webp" class="object-img1"></small>
   <div class="row align-items-center mt-2">
     <div class="col-lg-6">
       <h2 class="text-content">A University That Prepares <br>You for the Real World</h2>
@@ -1654,19 +122,19 @@ html, body { overflow-x: hidden; min-width: 320px; }
     <div class="col-lg-4">
 
       <div class="feature-card">
-        <img src="./image/trusted.png">
+        <img src="./image/trusted.webp">
         <h6 class="fw-bold mt-2">Trusted Legacy in Education</h6>
         <p class="mt-1">33+ years of academic excellence, shaping 35,000+ leaders and innovators across disciplines.</p>
       </div>
 
       <div class="feature-card">
-        <img src="./image/global.png">
+        <img src="./image/global.webp">
         <h6 class="fw-bold mt-2">Global Opportunities</h6>
         <p class="mt-1">  India’s first university to offer a Joint Degree Program with Penn State University (QS Top 100) and collaborations with leading institutions worldwide.</p>
       </div>
 
       <div class="feature-card">
-        <img src="./image/container.png">
+        <img src="./image/container.webp">
         <h6 class="fw-bold mt-2">Proven Placements</h6>
         <p class="mt-1"> 110+ recruiters, 2050+ offers in 2022–23, with students securing premium packages up to ₹60 LPA from Google, Amazon, and other global leaders.</p>
       </div>
@@ -1674,7 +142,7 @@ html, body { overflow-x: hidden; min-width: 320px; }
     </div>
 
     <div class="col-lg-4 text-center position-relative">
-  <img src="./image/man.png" class="leader-img">
+  <img src="./image/man.webp" class="leader-img">
 
   <div class="badge-years">
     <span class="badge-exp">34+</span>
@@ -1685,18 +153,18 @@ html, body { overflow-x: hidden; min-width: 320px; }
     <div class="col-lg-4">
 
       <div class="feature-card">
-        <img src="./image/trusted.png">
+        <img src="./image/trusted.webp">
         <h6 class="fw-bold mt-2"></h6>Top Gun Training Program
         <p  class="mt-1"> A flagship initiative that prepares graduates for high-stakes careers, with 2022–23 batches proving its success through record-breaking offers.</p>
       </div>
 
       <div class="feature-card">
-        <img src="./image/global.png">
+        <img src="./image/global.webp">
         <h6 class="fw-bold mt-2">Industry Mentorship</h6>
         <p class="mt-1"> Seminars, workshops, and guest lectures led by CTOs and Delivery Heads from Google, Microsoft, Adobe, Amazon, and TCS — direct learning from industry leaders.</p>
       </div>
       <div class="feature-card">
-        <img src="./image/container.png">
+        <img src="./image/container.webp">
         <h6 class="fw-bold mt-2">Research & Innovation Hub</h6>
         <p class="mt-1"> 250+ patents filed, 2500+ faculty publications, and 30+ advanced labs including V-Hub Innovation Centre & AICTE IDEA Lab driving real-world innovation</p>
       </div>
@@ -1711,7 +179,7 @@ html, body { overflow-x: hidden; min-width: 320px; }
       <div class="text-center mb-4">
         <div class="d-flex justify-content-center align-items-center gap-2">
           <span class="fw-semibold programs-label">Programs Offered</span>
-          <img src="./image/object2.png" width="18" />
+          <img src="./image/object2.webp" width="18" />
         </div>
         <h2 class="fw-bold programs-title">
 Here Are Our 50+ Industry Centred Programs To Choose From</h2>
@@ -1719,7 +187,7 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
       <div class="programs-inner">
         <div class="row g-4">
           <div class="col-md-5 d-flex justify-content-center">
-            <img src="image/Rectangle.png" class="programs-image" />
+            <img src="image/Rectangle.webp" class="programs-image" />
           </div>
           <div class="col-md-7">
             <div class="programs-right">
@@ -1809,13 +277,13 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
     <div class="container">
       <div class="row align-items-center g-4">
         <div class="col-md-5">
-          <img src="image/Image.png" class="about-single-img" />
+          <img src="image/Image.webp" class="about-single-img" />
         </div>
         <div class="col-md-7">
           <div class="about-text-block">
             <div class="d-flex align-items-center gap-2 mb-2">
               <span class="about-label fw-bold">About Us</span>
-              <img src="./image/object.png" width="18" />
+              <img src="./image/object.webp" width="18" />
             </div>
             <h2 class="about-title fw-bold">From Local Roots <br>to Global Careers</h2>
             <p class="about-para">
@@ -1829,14 +297,14 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
   <section class="collab-section">
     <div class="container text-center">
       <p class="collab-label mb-1">
-        Our Collaboration <img src="./image/object.png" width="16">
+        Our Collaboration <img src="./image/object.webp" width="16">
       </p>
       <h2 class="collab-title fw-bold">Global Academic Collaborations</h2>
       <p class="collab-subtitle">
         Expanding horizons through student exchange, dual degree, and study abroad programs with world-class universities.
       </p>
       <div class="collab-layout">
-        <img src="image/earth.png" class="collab-earth" alt="Earth">
+        <img src="image/earth.webp" class="collab-earth" alt="Earth">
         <div class="logo-card logo-pos-1">
           <img src="image/logo-penn.png" alt="Penn State">
         </div>
@@ -1866,14 +334,14 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
       <!-- Heading Section -->
       <div class="placement-tag">
         <span>PLACEMENT HIGHLIGHTS</span>
-        <img src="image/object.png" alt="paper rocket" class="placement-tag-icon" />
+        <img src="image/object.webp" alt="paper rocket" class="placement-tag-icon" />
       </div>
       <h2 class="placement-heading">Proven Placements with Global Recruiters</h2>
 
       <div class="row g-9 mt-2 align-items-center">
         <!-- LEFT IMAGE -->
         <div class="col-lg-3 ">
-          <img src="image/placement-students.png" class="placement-img" />
+          <img src="image/placement-students.webp" class="placement-img" />
         </div>
 
         <!-- RIGHT SIDE -->
@@ -1881,12 +349,12 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
           <div class="testimonial-card">
             <!-- yellow bg -->
             <div class="yellow-right">
-              <img src="image/yellow-bg1.png" class="yellow-layer light" />
-              <img src="image/yellow-bg2.png" class="yellow-layer dark" />
+              <img src="image/yellow-bg1.webp" class="yellow-layer light" />
+              <img src="image/yellow-bg2.webp" class="yellow-layer dark" />
             </div>
 
             <!-- quote -->
-            <img src="image/quote-big.png" class="quote-bg" />
+            <img src="image/quote-big.webp" class="quote-bg" />
 
             <!-- text -->
             <div class="testimonial-body">
@@ -1900,11 +368,11 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
             </div>
 
             <!-- student photo -->
-            <img src="image/student.png" class="student-photo" />
+            <img src="image/student.webp" class="student-photo" />
 
             <!-- company + salary -->
             <div class="salary-badge">
-              <img src="image/yugabytedb.png" />
+              <img src="image/yugabytedb.webp" />
               ₹44 LPA
             </div>
           </div>
@@ -1953,23 +421,22 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
     <div class="col-12">
       <div class="marquee left">
         <div class="track">
-          <img src="./image/image (1).png">
-          <img src="./image/image (2).png">
-          <img src="./image/image (3).png">
-          <img src="./image/image (4).png">
-          <img src="./image/image (5).png">
+          <img src="./image/image (1).webp">
+          <img src="./image/image (2).webp">
+          <img src="./image/image (3).webp">
+          <img src="./image/image (4).webp">
+          <img src="./image/image (5).webp">
+          <img src="./image/image (1).webp">
+          <img src="./image/image (2).webp">
+          <img src="./image/image (3).webp">
+          <img src="./image/image (4).webp">
+          <img src="./image/image (5).webp">
 
-          <img src="./image/image (1).png">
-          <img src="./image/image (2).png">
-          <img src="./image/image (3).png">
-          <img src="./image/image (4).png">
-          <img src="./image/image (5).png">
-
-          <img src="./image/image (1).png">
-          <img src="./image/image (2).png">
-          <img src="./image/image (3).png">
-          <img src="./image/image (4).png">
-          <img src="./image/image (5).png">
+          <img src="./image/image (1).webp">
+          <img src="./image/image (2).webp">
+          <img src="./image/image (3).webp">
+          <img src="./image/image (4).webp">
+          <img src="./image/image (5).webp">
         </div>
       </div>
     </div>
@@ -1980,17 +447,16 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
     <div class="col-12">
       <div class="marquee right">
         <div class="track">
-          <img src="./image/image (6).png">
-          <img src="./image/image (7).png">
-          <img src="./image/image (8).png">
+          <img src="./image/image (6).webp">
+          <img src="./image/image (7).webp">
+          <img src="./image/image (8).webp">
 
-          <img src="./image/image (6).png">
-          <img src="./image/image (7).png">
-          <img src="./image/image (8).png">
-
-          <img src="./image/image (6).png">
-          <img src="./image/image (7).png">
-          <img src="./image/image (8).png">
+          <img src="./image/image (6).webp">
+          <img src="./image/image (7).webp">
+          <img src="./image/image (8).webp">
+          <img src="./image/image (6).webp">
+          <img src="./image/image (7).webp">
+          <img src="./image/image (8).webp">
         </div>
       </div>
     </div>
@@ -2007,15 +473,15 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
 
       <!-- TOP IMAGES (INSIDE RED BOX FOR PERFECT OVERFLOW) -->
       <div class="row justify-content-center campus-img-row campus-img-top g-2">
-        <div class="col-auto"><img src="./image/std1.png" class="campus-img"></div>
-        <div class="col-auto"><img src="./image/std2.png" class="campus-img"></div>
-        <div class="col-auto"><img src="./image/std3.png" class="campus-img"></div>
+        <div class="col-auto"><img src="./image/std1.webp" class="campus-img"></div>
+        <div class="col-auto"><img src="./image/std2.webp" class="campus-img"></div>
+        <div class="col-auto"><img src="./image/std3.webp" class="campus-img"></div>
       </div>
 
       <!-- CENTER TEXT -->
      <p class="mb-2 text-uppercase campus-subtitle">
   World-Class Facilities 
-  <img src="./image/object2.png" class="object2-img">
+  <img src="./image/object2.webp" class="object2-img">
 </p>
 
       <h2 class="fw-bold mt-4">
@@ -2024,9 +490,9 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
 
       <!--  BOTTOM IMAGES -->
       <div class="row justify-content-center campus-img-row campus-img-bottom g-2">
-        <div class="col-auto"><img src="./image/std4.png" class="campus-img"></div>
-        <div class="col-auto"><img src="./image/std5.png" class="campus-img"></div>
-        <div class="col-auto"><img src="./image/std6.png" class="campus-img"></div>
+        <div class="col-auto"><img src="./image/std4.webp" class="campus-img"></div>
+        <div class="col-auto"><img src="./image/std5.webp" class="campus-img"></div>
+        <div class="col-auto"><img src="./image/std6.webp" class="campus-img"></div>
       </div>
 
     </div>
@@ -2061,37 +527,37 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
       <!-- STEP 1 -->
       <div class="step-box">
          <h6 class="step-text">STEP 1</h6>
-        <img src="./image/step1.png">
+        <img src="./image/step1.webp">
        
         <p>Register Yourself</p>
       </div>
 
-      <img src="./image/arrow.png" class="arrow-img">
+      <img src="./image/arrow.webp" class="arrow-img">
 
       <!-- STEP 2 -->
       <div class="step-box">
          <h6>STEP 2</h6>
-        <img src="./image/step2.png">
+        <img src="./image/step2.webp">
        
         <p>Verify Mobile No. & Email-ID</p>
       </div>
 
-      <img src="./image/arrow.png" class="arrow-img">
+      <img src="./image/arrow.webp" class="arrow-img">
 
       <!--  STEP 3 -->
       <div class="step-box">
         <h6>STEP 3</h6>
-        <img src="./image/step3.png">
+        <img src="./image/step3.webp">
         
         <p>Fill Application Form online</p>
       </div>
 
-      <img src="./image/arrow.png" class="arrow-img">
+      <img src="./image/arrow.webp" class="arrow-img">
 
       <!--  STEP 4 -->
       <div class="step-box">
         <h6>STEP 4</h6>
-        <img src="./image/step4.png">
+        <img src="./image/step4.webp">
         
         <p>Pay Your Application Fee</p>
       </div>
@@ -2103,7 +569,7 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
   <div class="container text-center">
 
     <p class="faq-label">
-      FAQ <img src="./image/object.png" width="16" alt="">
+      FAQ <img src="./image/object.webp" width="16" alt="">
     </p>
 
     <h2 class="faq-title">Frequently asked questions</h2>
@@ -2203,7 +669,7 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
 
   <!-- HERO BANNER -->
   <div class="mbuHeroWrap">
-    <img src="./image/banner.png" class="mbuHeroImg" alt="MBU Banner">
+    <img src="./image/banner.webp" class="mbuHeroImg" alt="MBU Banner">
 
     <div class="mbuHeroOverlay">
       <div>
@@ -2221,7 +687,7 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
 
       <!-- LOGO -->
       <div class="col-md-6 mb-3 mb-md-0 mbuMobileCenter">
-        <img src="./image/logo.png" width="260" alt="MBU Logo">
+        <img src="./image/logo.webp" width="260" alt="MBU Logo">
       </div>
 
       <!-- CONTACT INFO -->
@@ -2269,156 +735,7 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
- <script>
-  (function($){
-    $(function(){ // document ready
-
-      // ---------- NAV: close mobile menu when a nav link clicked ----------
-      $('#mbuMenu .nav-link').on('click', function(){
-        $('#mbuMenu').collapse('hide');
-      });
-
-      // fallback toggler (keeps behavior consistent)
-      $('.navbar-toggler').on('click', function(){
-        $('#mbuMenu').collapse('toggle');
-      });
-
-      // ---------- Keep Program/FAQ accordion icons in sync ----------
-      // (Works if your buttons use data-target OR aria-controls)
-      function findToggleButtonByCollapse($collapse) {
-        var id = $collapse.attr('id');
-        if (!id) return $(); // return empty jQuery if no id
-        return $('[data-target="#'+id+'"], [data-bs-target="#'+id+'"], [aria-controls="'+id+'"]');
-      }
-
-      // Ensure PLUS/MINUS icon classes for accordion-button children (.icon-plus / .icon-minus)
-      $('.collapse').each(function(){
-        var $c = $(this);
-        var $btn = findToggleButtonByCollapse($c);
-
-        if($c.hasClass('show')){
-          if ($btn && $btn.length) {
-            $btn.removeClass('collapsed');
-            var $iconMinus = $btn.find('.icon-minus');
-            if ($iconMinus && $iconMinus.length) {
-              $iconMinus.removeClass('icon-minus').addClass('icon-plus');
-            }
-          }
-        } else {
-          if ($btn && $btn.length) {
-            $btn.addClass('collapsed');
-            var $iconPlus = $btn.find('.icon-plus');
-            if ($iconPlus && $iconPlus.length) {
-              $iconPlus.removeClass('icon-plus').addClass('icon-minus');
-            }
-          }
-        }
-      });
-
-      // When any collapse shows, update its button icon
-      $(document).on('show.bs.collapse', '.collapse', function(){
-        var $btn = findToggleButtonByCollapse($(this));
-        if ($btn && $btn.length) {
-          $btn.removeClass('collapsed');
-          var $iconMinus = $btn.find('.icon-minus');
-          if ($iconMinus && $iconMinus.length) {
-            $iconMinus.removeClass('icon-minus').addClass('icon-plus');
-          }
-        }
-      });
-
-      // When any collapse hides, update its button icon
-      $(document).on('hide.bs.collapse', '.collapse', function(){
-        var $btn = findToggleButtonByCollapse($(this));
-        if ($btn && $btn.length) {
-          $btn.addClass('collapsed');
-          var $iconPlus = $btn.find('.icon-plus');
-          if ($iconPlus && $iconPlus.length) {
-            $iconPlus.removeClass('icon-plus').addClass('icon-minus');
-          }
-        }
-      });
-
-      // ---------- FAQ: arrow image + button color sync ----------
-      function syncFaqVisuals() {
-        $('.faq-accordion .collapse').each(function(){
-          var id = $(this).attr('id');
-          if (!id) return;
-          var $btn = $('[data-target="#'+id+'"], [data-bs-target="#'+id+'"], [aria-controls="'+id+'"]');
-          if(!$btn || !$btn.length) return;
-
-          if($(this).hasClass('show')){
-            $btn.removeClass('collapsed');
-            var $arrow = $btn.find('.faq-arrow');
-            if ($arrow && $arrow.length) {
-              $arrow.css({'background-image':'url("./image/drop1.png")','transform':'rotate(180deg)'});
-            }
-            $btn.css({'background':'#D71921','color':'#fff'});
-          } else {
-            $btn.addClass('collapsed');
-            var $arrow2 = $btn.find('.faq-arrow');
-            if ($arrow2 && $arrow2.length) {
-              $arrow2.css({'background-image':'url("./image/drop2.png")','transform':'rotate(0deg)'});
-            }
-            $btn.css({'background':'#F6C617','color':'#000'});
-          }
-        });
-      }
-
-      // run on load
-      syncFaqVisuals();
-
-      // update when show/hide fires for FAQ items
-      $(document).on('show.bs.collapse', '.faq-accordion .collapse', function(){
-        var id = $(this).attr('id');
-        if (!id) return;
-        var $btn = $('[data-target="#'+id+'"], [data-bs-target="#'+id+'"], [aria-controls="'+id+'"]');
-        if (!$btn || !$btn.length) return;
-        $btn.removeClass('collapsed');
-        var $arrow = $btn.find('.faq-arrow');
-        if ($arrow && $arrow.length) {
-          $arrow.css({'background-image':'url("./image/drop1.png")','transform':'rotate(180deg)'});
-        }
-        $btn.css({'background':'#D71921','color':'#fff'});
-      });
-
-      $(document).on('hide.bs.collapse', '.faq-accordion .collapse', function(){
-        var id = $(this).attr('id');
-        if (!id) return;
-        var $btn = $('[data-target="#'+id+'"], [data-bs-target="#'+id+'"], [aria-controls="'+id+'"]');
-        if (!$btn || !$btn.length) return;
-        $btn.addClass('collapsed');
-        var $arrow = $btn.find('.faq-arrow');
-        if ($arrow && $arrow.length) {
-          $arrow.css({'background-image':'url("./image/drop2.png")','transform':'rotate(0deg)'});
-        }
-        $btn.css({'background':'#F6C617','color':'#000'});
-      });
-
-      // ---------- Optional: if you have accordion-button elements without native data-toggle,
-      // you can still toggle collapse by clicking them. This does NOT break native Bootstrap behavior. ----------
-      $('.accordion-button').on('click', function(e){
-        // find the target (supports both data-target & aria-controls)
-        var target = $(this).attr('data-target') || $(this).attr('data-bs-target');
-        if(!target){
-          var id = $(this).attr('aria-controls');
-          if(id) target = '#'+id;
-        }
-        if(target){
-          // toggle collapse via BS4
-          try {
-            $(target).collapse('toggle');
-          } catch (err) {
-            // if collapse toggle fails (invalid target), just ignore to prevent JS error
-            // console.warn('Collapse toggle failed for', target, err);
-          }
-        }
-        // don't prevent default — let BS handle ARIA and focus
-      });
-
-    });
-  })(jQuery);
-</script>
+<script src="scripts.js"></script>
 
 
 </body>
