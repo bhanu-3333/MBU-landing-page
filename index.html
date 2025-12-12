@@ -24,6 +24,7 @@
   position: relative;   
   z-index: 9999;  
 }
+
 .hero-section {
 background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),url("./image/campus.png") center/cover no-repeat;
 border-radius: 0 0 90px 90px;
@@ -1315,23 +1316,23 @@ border-radius: 10px 10px 0 0;
       fill: #F6C617;
       
     }
-    .mbuFooterBar {
-    position: relative;              /* keeps it in normal flow */
-  left: 50%;                       /* move to center reference */
-  right: 50%;
-  margin-left: -50vw;              /* pull left edge to viewport left */
-  margin-right: -50vw;             /* pull right edge to viewport right */
-  width: 100vw;                    /* fill viewport width (safe now) */
-  box-sizing: border-box;          /* include padding in width */
+ /* Footer: normal centered footer (placed OUTSIDE .page-center-wrap) */
+.mbuFooterBar {
+  width: 100%;               /* fills the page-center width */
+  max-width: 1600px;        /* match your .page-center-wrap max (adjust if you used different) */
+  margin: 24px auto 0;      /* center and add top gap */
+  box-sizing: border-box;
   padding: 17px 19px;
   background: #D71921;
   color: #fff;
   text-align: center;
   font-size: 14px;
-  z-index: 50;
-  /* optional: prevent horizontal scrollbar artifacts */
-  overflow-x: hidden;
-    }
+  z-index: 10;
+}
+
+
+/* If you want a slightly wider footer on very large screens, raise max-width value above */
+
  @media (max-width: 768px) {
 
   .mbuHeroImg {
@@ -2246,11 +2247,12 @@ Here Are Our 50+ Industry Centred Programs To Choose From</h2>
 </div>
 
 <!-- FOOTER -->
+
+
+  </div> <!-- /.page-center-wrap -->
 <div class="mbuFooterBar">
   © 2025 Mohan Babu University (MBU). All Rights Reserved.
 </div>
-
-  </div> <!-- /.page-center-wrap -->
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
