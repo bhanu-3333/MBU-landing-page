@@ -146,7 +146,7 @@
           $btn.addClass('collapsed');
           var $arrow2 = $btn.find('.faq-arrow');
           if ($arrow2 && $arrow2.length) {
-            $arrow2.css({'background-image':'url("./image/drop2.webp")','transform':'rotate(0deg)'});
+            $arrow2.css({'background-image':'url("./image/drop2.png")','transform':'rotate(0deg)'});
           }
           $btn.css({'background':'#F6C617','color':'#000'});
         }
@@ -178,7 +178,7 @@
       $btn.addClass('collapsed');
       var $arrow = $btn.find('.faq-arrow');
       if ($arrow && $arrow.length) {
-        $arrow.css({'background-image':'url("./image/drop2.webp")','transform':'rotate(0deg)'});
+        $arrow.css({'background-image':'url("./image/drop2.png")','transform':'rotate(0deg)'});
       }
       $btn.css({'background':'#F6C617','color':'#000'});
     });
