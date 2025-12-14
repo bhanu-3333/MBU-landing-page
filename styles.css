@@ -173,10 +173,10 @@ width: 109%;
   font-weight: 600;
 }
 .container{
-  width: 1050px;
-  margin-bottom: 100px;/*add margin*/
+  max-width: 1050px;
+  width: 100%;
+  margin: 0 auto 100px;
   position: relative;
-  bottom: 40px;
 }
 
 html, body {
@@ -1083,7 +1083,7 @@ right: 60px;
       z-index: 1;
       overflow: visible;
       width:1216px;
-      right:100px; /* ✅ allows images to overflow */
+      right:10px; /* ✅ allows images to overflow */
     }
 
     .campus-img-row {
