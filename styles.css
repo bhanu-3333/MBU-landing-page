@@ -23,8 +23,11 @@ color: white;
 position: relative;
 z-index: 1;            
 bottom: 140px; 
-right:64px ; 
-width: 109%;
+
+  width: 100%;
+  right: 0;
+
+
 }
 
 
@@ -351,7 +354,8 @@ html, body {
 
 .programs-section{
       max-width:1400px;
-    margin-left: 64px;
+   margin-left: auto;
+  margin-right: auto;
     margin-bottom: 50px;
       padding:40px 24px;
       border-radius:28px;
@@ -361,6 +365,7 @@ html, body {
       background-position:center;
       overflow:hidden;
       min-height:670px;
+      margin-top: 40px;
     }
 
 .programs-inner {
