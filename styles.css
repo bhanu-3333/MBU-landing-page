@@ -493,8 +493,8 @@ border-radius: 10px 10px 0 0;
     }
 
    .about-section {
-    margin-top: 100px;   /* ⬅ adds space above the section */
-    margin-bottom: 10px;
+       /* ⬅ adds space above the section */
+    margin-bottom: 20px;
 }
 
     .about-text-block{
@@ -873,7 +873,9 @@ position: relative;
   margin-bottom: 0 !important;
   bottom: 0 !important;
 }
-
+.pt-5, .py-5 {
+    padding-top: 1rem !important;
+}
 @media (max-width: 768px) {
   .placement-section .stats-box .col-md-3 {
     flex: 0 0 50%;      /* 2 per row */
@@ -892,7 +894,7 @@ position: relative;
       margin-left: 130px;
       position: relative;
       right: 60%;
-      bottom: 30px;
+      
       
 }
 @media (max-width: 991.98px) {
