@@ -596,12 +596,12 @@ right:70px;
     }
 
     .about-label {
-      font-size: 0.875rem;
+      font-size: 16px;
       letter-spacing: 1px;
     }
 
     .about-title {
-      font-size: 24px;
+      font-size: 34px;
       line-height: 32px;
     }
 
@@ -648,7 +648,7 @@ right:70px;
       position:absolute;
       top:40%;
       left:50%;
-      width:750px;
+      width:450px;
       transform:translate(-50%,-50%);
       border-radius:50%;
     }
@@ -807,8 +807,9 @@ right:70px;
       }
 
       .collab-title {
-        font-size: 28px;
+        font-size: 27px;
         line-height: 36px;
+        font-weight: 600;
       }
 
       .collab-subtitle {
@@ -896,10 +897,7 @@ right:70px;
         opacity: 1 !important;
       }
 
-      .collab-title {
-        font-size: 24px;
-        line-height: 30px;
-      }
+    
     }
 
     @media (max-width:768px){
