@@ -199,5 +199,27 @@
       }
     });
 
+    // ---------- Logo card hover effect for touch devices ----------
+    $('.logo-card').on('touchstart', function(e){
+      e.preventDefault();
+      $(this).addClass('logo-hover');
+    });
+
+    $('.logo-card').on('touchend', function(e){
+      var $card = $(this);
+      setTimeout(function(){
+        $card.removeClass('logo-hover');
+      }, 300);
+    });
+
+    // Also support click for better compatibility
+    $('.logo-card').on('click', function(e){
+      $(this).toggleClass('logo-hover');
+      var $card = $(this);
+      setTimeout(function(){
+        $card.removeClass('logo-hover');
+      }, 500);
+    });
+
   });
 })(jQuery);
