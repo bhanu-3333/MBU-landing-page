@@ -181,7 +181,7 @@ bottom: 140px;
 }
 
 .mbu-box {
-  margin-top: 0 !important;
+  margin-top: 10px !important;
   padding-top: 0 !important;
 }
 
@@ -405,6 +405,7 @@ html, body {
       max-height:390px;
       overflow-y:auto;
       padding-right:6px;
+      padding-top: 0;
     }
     .programs-right::-webkit-scrollbar{
       width:8px;
@@ -424,8 +425,11 @@ html, body {
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 12px;
+  margin-top: 0;
+}
 
- 
+.programs-inner .accordion .accordion-item:first-child {
+  margin-top: 0;
 }
 
   .programs-inner .accordion-button {
@@ -899,10 +903,7 @@ right:70px;
 
     @media (max-width:768px){
       .programs-title{font-size:1.6rem;}
-      .programs-section{
-        margin-left: 0px;
       
-      }
       .accordion-button{
         margin-top: 10px;
       }
