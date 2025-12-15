@@ -181,7 +181,7 @@ bottom: 140px;
 }
 
 .mbu-box {
-  margin-top: 10px !important;
+  margin-top: 0px !important;
   padding-top: 0 !important;
 }
 
@@ -2283,48 +2283,69 @@ font-style: "semi-bold";
     .step-box {
   text-align: center;
   width: 150px;          
-  height: 180px;         
+  min-width: 150px;
+  max-width: 150px;
+  height: 180px;
+  min-height: 180px;
+  max-height: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 20px;
+  box-sizing: border-box;
+  overflow: visible;
+  padding: 8px 5px;
 }
 
 .step-box img {
   width: 111px;          
   height: 106px;          
   object-fit: contain;
-
+  display: block;
+  margin: 5px auto;
   background: #D71921;  
   border: 1.12px solid #000;
   border-radius: 4.46px;
   padding: 10px;
-  margin-bottom: 10px;
+  flex-shrink: 0;
 }
 
 .step-box h6 {
   font-size: 22.62px;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin: 0;
+  padding: 0;
   letter-spacing: 2.26PX;
+  text-align: center;
+  width: 100%;
+  line-height: 1.2;
+  flex-shrink: 0;
 }
 
 .step-box p {
   font-size: 17.85px;
   line-height: 21px;
   font-weight: 600;
-  margin-top:20px;
+  margin: 0;
+  padding: 0;
   min-height: 32px;
-  margin-bottom: 40px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  overflow: visible;
+  margin-top: 20px;
    /* ✅ Keeps text area equal even if content changes */
 }
 
 
     .arrow-img {
       width: 60px;
-      margin-bottom: 40px;
-
+      height: auto;
+      margin: 0 15px;
+      align-self: center;
+      flex-shrink: 0;
     }
 @media (max-width: 768px) {
 
@@ -2341,9 +2362,15 @@ font-style: "semi-bold";
   }
 
   .step-box {
-    width: 100%;
+    width: 260px;
+    min-width: 260px;
     max-width: 260px;
+    height: 200px;
+    min-height: 200px;
+    max-height: 200px;
     margin-top: 40px; /* 10px gap above each step in responsive */
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .arrow-img {
