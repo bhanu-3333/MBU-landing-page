@@ -733,7 +733,9 @@ right:70px;
       .collab-earth {
         position: static !important;
         transform: none !important;
-        width: 400px !important;
+        width: 500px !important;
+        max-width: 90% !important;
+        height: auto !important;
         margin: 0 auto 20px !important;
         display: block !important;
         order: -1;
@@ -837,8 +839,8 @@ right:70px;
 
       .collab-earth {
         width: 100% !important;
-        max-width: 600px !important;
-        height: auto !important;
+        max-width: 900px !important;
+        height: 350px!important;
         margin: 37px auto !important;
         position: static !important;
         left: auto !important;
