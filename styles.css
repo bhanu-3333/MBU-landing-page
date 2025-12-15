@@ -1445,10 +1445,10 @@ right:70px;
     }
 
     .campus-redbox h2 {
-      font-size: 36px;
+      font-size: 32px;
       line-height: 44px;
       font-weight: 700;
-      margin-top: 20px;
+      margin-top: 10px;
       margin-bottom: 0;
     }
 
@@ -1475,8 +1475,13 @@ right:70px;
       height: 280px;
       object-fit: cover;
       border-radius: 10px;
-      
     }
+
+    /* Hide duplicate images on desktop/web */
+    .campus-img-row .col-auto:nth-child(n+4) {
+      display: none;
+    }
+
     .campus-subtitle {
   font-weight: 400;
   font-size: 16px;
@@ -1512,7 +1517,7 @@ right:70px;
   }
 
   .campus-redbox h2 {
-    font-size: 32px;
+    font-size: 16px;
     line-height: 40px;
     margin-top: 15px;
   }
@@ -1547,28 +1552,44 @@ right:70px;
     height: auto;
     min-height: 350px;
     border-radius: 12px;
+    overflow: hidden;
   }
 
   .campus-redbox h2 {
-    font-size: 28px;
+    font-size: 16px;
     line-height: 36px;
     margin-top: 12px;
     padding: 0 10px;
   }
 
   .campus-img-row {
-    justify-content: center !important;
-    overflow: visible;
+    display: flex !important;
+    justify-content: flex-start !important;
+    overflow: hidden !important;
     position: relative;
+    width: max-content;
+    gap: 15px;
+    animation: campus-scroll 15s linear infinite;
+    will-change: transform;
   }
 
+  .campus-img-row .col-auto {
+    flex-shrink: 0;
+  }
+
+  /* Show all images including duplicates in responsive */
   .campus-img-row .col-auto:nth-child(3) {
-    display: none;
+    display: block;
+  }
+
+  .campus-img-row .col-auto:nth-child(n+4) {
+    display: block !important;
   }
 
   .campus-img {
     width: 140px;
     height: 140px;
+    flex-shrink: 0;
   }
   
   .campus-img-top {
@@ -1581,6 +1602,15 @@ right:70px;
     bottom: -20px;
     transform: none;
     position: relative;
+  }
+
+  @keyframes campus-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 
   .campus-subtitle {
@@ -1613,10 +1643,17 @@ right:70px;
   }
 
   .campus-redbox h2 {
-    font-size: 22px;
+    font-size: 16px;
     line-height: 28px;
     margin-top: 10px;
     padding: 0 5px;
+  }
+
+  .campus-img-row {
+    animation: campus-scroll-mobile 12s linear infinite;
+    gap: 12px;
+    width: max-content;
+    will-change: transform;
   }
 
   .campus-img {
@@ -1630,6 +1667,15 @@ right:70px;
 
   .campus-img-bottom {
     bottom: -15px;
+  }
+
+  @keyframes campus-scroll-mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 
   .campus-subtitle {
