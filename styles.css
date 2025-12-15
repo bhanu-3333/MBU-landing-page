@@ -794,9 +794,15 @@ position: relative;
     }
 
     @media (max-width: 480px) {
+      .collab-section {
+        padding-top: 60px !important;
+        padding-bottom: 50px !important;
+      }
+
       .collab-layout {
         gap: 15px !important;
         padding: 0 15px !important;
+        min-height: 550px !important;
       }
 
       .collab-earth {
