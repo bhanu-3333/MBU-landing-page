@@ -2047,10 +2047,12 @@ font-style: "semi-bold";
     font-size: 14px;
     line-height: 24px;
     gap: 15px;
+    align-items: flex-start;
   }
 
   .mbuContactItem:last-child {
-    margin-left: -10px;
+    margin-left: 0;
+    align-items: flex-start;
   }
 
   .mbuContactIcon {
@@ -2098,20 +2100,22 @@ font-style: "semi-bold";
   }
 
   .mbuContactStrip .col-md-6:last-child {
-    padding-left: 0;
+    padding-left: 90px;
     margin-top: 20px;
   }
 
   .mbuContactItem {
-    justify-content: center;
+    justify-content: flex-start;
     margin-left: 0 !important;
     font-size: 14px;
     line-height: 22px;
     gap: 12px;
+    align-items: flex-start;
   }
 
   .mbuContactItem:last-child {
     margin-left: 0 !important;
+    align-items: flex-start;
   }
 
   .mbuContactIcon {
@@ -2141,6 +2145,12 @@ font-style: "semi-bold";
     line-height: 20px;
     gap: 10px;
     margin: 8px 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .mbuContactItem:last-child {
+    align-items: flex-start;
   }
 
   .mbuContactIcon {
