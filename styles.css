@@ -2332,7 +2332,7 @@ font-style: "semi-bold";
   .step-box {
     width: 100%;
     max-width: 260px;
-    margin-top: 10px; /* 10px gap above each step in responsive */
+    margin-top: 40px; /* 10px gap above each step in responsive */
   }
 
   .arrow-img {
