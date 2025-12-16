@@ -1439,7 +1439,7 @@ right:70px;
       background:#D71921;
       height: 440px;
       border-radius: 16px;
-      padding: 120px 40px 160px 40px;
+      padding: 140px 40px 160px 40px;
       text-align: center;
       color: white;
       position: relative;
@@ -1496,12 +1496,12 @@ right:70px;
     .campus-subtitle {
   font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 0px;
   letter-spacing: 4.07px;
   width: 100%;
   text-align: center;
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
       .object2-img {
@@ -1827,7 +1827,7 @@ font-style: "semi-bold";
   line-height: 30px;
   letter-spacing: 0;
   color: #000;
-
+ 
   padding: 18px 26px;
   text-align: left;
   border-radius: 0 0
@@ -1980,6 +1980,7 @@ font-style: "semi-bold";
         line-height: 22px;
         padding: 14px 16px;
         font-weight:400;
+        font-family: 'Roboto Flex';
       }
     }
 
