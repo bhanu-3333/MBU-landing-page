@@ -242,127 +242,139 @@
     </div>
   </div>
 </section>
-
 <section class="programs-section">
-    <div class="container-fluid">
-      <div class="text-center mb-4">
-        <div class="d-flex justify-content-center align-items-center gap-2">
-          <span class="fw-semibold programs-label">Programs Offered</span>
-          <img src="./image/object2.webp" width="18" />
-        </div>
-        <h2 class="fw-bold programs-title">
-Here Are Our 50+ Industry Centred Programs To Choose From</h2>
+  <div class="container-fluid">
+
+    <div class="text-center mb-4">
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <span class="fw-semibold programs-label">Programs Offered</span>
+        <img src="./image/object2.webp" width="18" />
       </div>
-      <div class="programs-inner"> 
-        <div class="row g-4">
-          <div class="col-md-5 d-flex justify-content-center">
-            <img src="image/Rectangle.webp" class="programs-image" />
-          </div>
-          <div class="col-md-7">
-            <div class="programs-right">
-              <div class="accordion" id="accordionPrograms">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#computing">
-                      School of Computing
-                      <span class="icon-minus ms-auto"></span>
-                    </button>
-                  </h2>
-                  <div id="computing" class="accordion-collapse collapse show">
-                    <div class="accordion-body">
-                      <ul class="programs-list list-unstyled">
-                        <li>B.Tech – Computer Science & Engineering (AI & ML)</li>
-                        <li>B.Tech – Computer Science & Engineering (AI & DS)</li>
-                        <li>B.Tech – Computer Science & Engineering (DevOps)</li>
-                        <li>B.Tech – Computer Science & Engineering (Cloud Computing)</li>
-                        <li>B.Tech – Computer Science & Engineering (SAP/ABAP in Academic)</li>
-                      </ul>
+      <h2 class="fw-bold programs-title">
+        Here Are Our 50+ Industry Centred Programs To Choose From
+      </h2>
+    </div>
+
+    <div class="programs-inner">
+      <div class="row g-4">
+
+        <!-- LEFT IMAGE -->
+        <div class="col-md-5 d-flex justify-content-center">
+          <img src="image/Rectangle.webp" class="programs-image" />
+        </div>
+
+        <!-- RIGHT ACCORDION -->
+        <div class="col-md-7">
+          <div class="programs-right">
+
+            <div class="accordion" id="accordionPrograms">
+
+              <!-- SCHOOL OF COMPUTING -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#computing">
+                    School of Computing
+                    <span class="icon-minus ms-auto"></span>
+                  </button>
+                </h2>
+
+                <div id="computing" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+
+                    <!-- ✅ COURSE SELECTOR -->
+                    <div class="course-filter">
+                      <label class="course-label">Select Course</label>
+                      <select class="course-select">
+                        <option>B.Tech</option>
+                        <option>M.Tech</option>
+                      </select>
                     </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#engineering">
-                      School of Engineering
-                      <span class="icon-plus ms-auto"></span>
-                    </button>
-                  </h2>
-                  <div id="engineering" class="accordion-collapse collapse">
-                    <div class="accordion-body">Add programs here.</div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#commerce1">
-                      School of Commerce and Management
-                      <span class="icon-plus ms-auto"></span>
-                    </button>
-                  </h2>
-                  <div id="commerce1" class="accordion-collapse collapse">
-                    <div class="accordion-body">Add programs here.</div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#commerce2">
-                      School of Pharmaceutical Sciences
-                      <span class="icon-plus ms-auto"></span>
-                    </button>
-                  </h2>
-                  <div id="commerce2" class="accordion-collapse collapse">
-                    <div class="accordion-body">Add programs here.</div>
-                  </div>
-                </div>
-                 <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#commerce3">
-                     School of Paramedical Allied & Healthcare Sciences
-                      <span class="icon-plus ms-auto"></span>
-                    </button>
-                  </h2>
-                  <div id="commerce3" class="accordion-collapse collapse">
-                    <div class="accordion-body">Add programs here.</div>
-                  </div>
-                </div>
-                 <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#commerce4">
-                      School of Agriculture 
-                      <span class="icon-plus ms-auto"></span>
-                    </button>
-                  </h2>
-                  <div id="commerce4" class="accordion-collapse collapse">
-                    <div class="accordion-body">Add programs here.</div>
+
+                    <!-- PROGRAM LIST -->
+                    <ul class="programs-list list-unstyled mt-3">
+                      <li>B.Tech – Computer Science & Engineering (AI & ML)</li>
+                      <li>B.Tech – Computer Science & Engineering (AI & DS)</li>
+                      <li>B.Tech – Computer Science & Engineering (DevOps)</li>
+                      <li>B.Tech – Computer Science & Engineering (Cloud Computing)</li>
+                      <li>B.Tech – Computer Science & Engineering (SAP/ABAP in Academic)</li>
+                    </ul>
+
                   </div>
                 </div>
               </div>
+
+              <!-- OTHER ACCORDIONS (UNCHANGED) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#engineering">
+                    School of Engineering
+                    <span class="icon-plus ms-auto"></span>
+                  </button>
+                </h2>
+                <div id="engineering" class="accordion-collapse collapse">
+                  <div class="accordion-body">Add programs here.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#commerce1">
+                    School of Commerce and Management
+                    <span class="icon-plus ms-auto"></span>
+                  </button>
+                </h2>
+                <div id="commerce1" class="accordion-collapse collapse">
+                  <div class="accordion-body">Add programs here.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#commerce2">
+                    School of Pharmaceutical Sciences
+                    <span class="icon-plus ms-auto"></span>
+                  </button>
+                </h2>
+                <div id="commerce2" class="accordion-collapse collapse">
+                  <div class="accordion-body">Add programs here.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#commerce3">
+                    School of Paramedical Allied & Healthcare Sciences
+                    <span class="icon-plus ms-auto"></span>
+                  </button>
+                </h2>
+                <div id="commerce3" class="accordion-collapse collapse">
+                  <div class="accordion-body">Add programs here.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#commerce4">
+                    School of Agriculture
+                    <span class="icon-plus ms-auto"></span>
+                  </button>
+                </h2>
+                <div id="commerce4" class="accordion-collapse collapse">
+                  <div class="accordion-body">Add programs here.</div>
+                </div>
+              </div>
+
             </div>
+
           </div>
         </div>
+
       </div>
     </div>
-  </section>
-  <section class="py-5 about-section">
-    <div class="container">
-      <div class="row align-items-center g-4">
-        <div class="col-md-5">
-          <img src="image/Image.webp" class="about-single-img" />
-        </div>
-        <div class="col-md-7">
-          <div class="about-text-block">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <span class="about-label fw-bold">About Us</span>
-              <img src="./image/object.webp" width="18" />
-            </div>
-            <h2 class="about-title fw-bold">From Local Roots to Global Careers</h2>
-            <p class="about-para">
-             At Mohan Babu University, every student’s journey is defined by a powerful blend of academic rigor, industry immersion, and global exposure. With access to state-of-the-art laboratories, international collaborations, and 65+ dynamic student clubs, learners go beyond traditional academics to develop real-world skills, leadership qualities, and the confidence to thrive on any stage.</p>
-            <p class="about-para mb-0">
-             Backed by a strong placement ecosystem of 110+ top recruiters, our students consistently achieve prestigious career outcomes — from ₹60 LPA offers at Google and high-value placements at Amazon and Deloitte to research patents and entrepreneurial ventures. At MBU, students don’t just earn degrees; they gain experiences that prepare them to lead, innovate, and excel in the real world.
-        </div>
-      </div>
-    </div>
-  </section>
+
+  </div>
+</section>
+
 <section class="collab-section">
   <div class="container text-center">
     
