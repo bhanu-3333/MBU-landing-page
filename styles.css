@@ -11,8 +11,10 @@
   margin:20px 0px 20px 220px ;
   background: white;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  position: relative;   
-  z-index: 9999;  
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  align-self: flex-start;
 }
 
 .hero-section {
@@ -23,8 +25,8 @@ color: white;
 position: relative;
 z-index: 1;            
 bottom: 140px; 
-  width: 110%;
-  right: 70px;
+width: 110%;
+right: 70px;
 
 }
 
@@ -107,7 +109,102 @@ bottom: 140px;
   display: inline-block;
   vertical-align: middle;
 }
-    .leader-img {
+  /* Statistics Banner Section */
+.stats-banner-section {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.stats-banner-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.stats-banner {
+  background: #ffc107;
+  border-radius: 10px;
+  width: 1192px;
+  max-width: 100%;
+  height: 175px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 16px;
+  margin: 0 auto;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  gap: 16px;
+  justify-content: center;
+  padding: 0 30px;
+}
+
+.stats-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stats-icon {
+  width: 76px;
+  height: 76px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stats-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.stats-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.stats-number {
+  font-size: 42px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 4px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.stats-label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.stats-divider {
+  width: 1px;
+  height: 80px;
+  background: #000;
+  flex-shrink: 0;
+}
+
+  .leader-img {
       max-width: 300px;
       border-radius: 20px;
     }
@@ -199,6 +296,9 @@ html, body {
     width: 95%;
     margin: 12px auto;
     padding: 10px 14px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
   }
 
   .navbar img {
@@ -335,6 +435,58 @@ html, body {
     margin-top: 0 !important;
    
   }
+
+  /* Statistics Banner Responsive */
+  .stats-banner-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 0 15px;
+  }
+
+  .stats-banner-wrapper {
+    padding: 0;
+  }
+
+  .stats-banner {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 175px;
+    padding: 30px 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stats-item {
+    width: 100%;
+    padding: 0 10px;
+    justify-content: flex-start;
+  }
+
+  .stats-divider {
+    width: 80%;
+    height: 1px;
+    margin: 10px 0;
+  }
+
+  .stats-number {
+    font-size: 36px;
+  }
+
+  .stats-label {
+    font-size: 14px;
+  }
+
+  .stats-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .stats-icon img {
+    width: 35px;
+    height: 35px;
+  }
+
   .choose{
     margin-left: 66px;
     
@@ -2466,7 +2618,7 @@ font-style: "semi-bold";
    while preserving alignment rules that define the look. */
 
 /* Center the whole page visually without changing your exact widths/heights */
-body > .page-center-wrap { max-width: 1400px; margin: 0 auto; position: relative; }
+body > .page-center-wrap { max-width: 1400px; margin: 0 auto; position: relative; overflow: visible; }
 
 /* Keep navbar visually centered while preserving its original dimensions */
 .navbar {
