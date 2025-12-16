@@ -1408,7 +1408,7 @@ position: relative;
   position: absolute;
   top: 50%;
   left: 35%;
-  width: 280px;
+  width: 200px;
   transform: translate(-50%, -50%);
   z-index: 3;
 }
