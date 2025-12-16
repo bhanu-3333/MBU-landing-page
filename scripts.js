@@ -102,7 +102,7 @@
       companyLogo: "image/yugabytedb.webp"
     },
     {
-      text: "The comprehensive curriculum and industry exposure prepared me for real-world challenges. The faculty's guidance and placement support were exceptional throughout my journey.",
+      text: "MBU gave me more than an education — it gave me direction. The placement training and continuous encouragement helped me achieve a milestone I’m truly proud of.",
       name: "Lakshmi Prasanna",
       role: "B.Tech Student",
       salary: "₹45 LPA",
@@ -110,7 +110,7 @@
       companyLogo: "image/yugabytedb.webp"
     },
     {
-      text: "Excellent infrastructure and experienced faculty members helped me achieve my career goals. The placement cell's efforts in connecting us with top companies were remarkable.",
+      text: "MBU taught me how to think, how to solve problems, and how to grow. The opportunities here opened the door to a career I once only dreamed of.",
       name: "Pavitra Reddy",
       role: "B.Tech Student",
       salary: "₹44 LPA",
