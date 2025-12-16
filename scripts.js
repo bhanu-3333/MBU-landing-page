@@ -84,24 +84,40 @@
  
 
      const testimonials = [
-    {
-      text: "Leverage agile frameworks to provide a robust synopsis for strategy foster. Leverage agile frameworks to provide a robust synopsis for go for strategy foster.",
-      name: "Pavitra Reddy",
-      role: "MBA Student",
-      salary: "₹44 LPA"
-    },
+  
     {
       text: "The placement guidance and industry mentoring helped me secure my dream role with confidence. Leverage agile frameworks to provide a robust synopsis for go for strategy foster.",
-      name: "Rahul Sharma",
+      name: "Harshavika",
       role: "B.Tech Student",
-      salary: "₹32 LPA"
+      salary: "₹60 LPA",
+      studentImage: "image/harshavika.png",
+      companyLogo: "image/yugabytedb.webp"
     },
     {
       text: "Hands-on training and continuous placement support made a huge impact on my career growth. Leverage agile frameworks to provide a robust synopsis for go for strategy foster.",
-      name: "Ananya Verma",
-      role: "MBA Student",
-      salary: "₹28 LPA"
-    }
+      name: "Vatsalya Polineni",
+      role: "B.Tech Student",
+      salary: "₹60 LPA",
+      studentImage: "image/student.webp",
+      companyLogo: "image/yugabytedb.webp"
+    },
+    {
+      text: "The comprehensive curriculum and industry exposure prepared me for real-world challenges. The faculty's guidance and placement support were exceptional throughout my journey.",
+      name: "Lakshmi Prasanna",
+      role: "B.Tech Student",
+      salary: "₹45 LPA",
+      studentImage: "image/",
+      companyLogo: "image/yugabytedb.webp"
+    },
+    {
+      text: "Excellent infrastructure and experienced faculty members helped me achieve my career goals. The placement cell's efforts in connecting us with top companies were remarkable.",
+      name: "Pavitra Reddy",
+      role: "B.Tech Student",
+      salary: "₹44 LPA",
+      studentImage: "image/student.webp",
+      companyLogo: "image/yugabytedb.webp"
+    },
+    
   ];
 
   let index = 0;
@@ -110,6 +126,8 @@
   const nameEl = document.getElementById("studentName");
   const roleEl = document.getElementById("studentRole");
   const salaryEl = document.getElementById("studentSalary");
+  const studentPhotoEl = document.querySelector(".student-photo");
+  const companyLogoEl = document.querySelector(".salary-badge img");
 
   // Only initialize if elements exist
   if (textEl && nameEl && roleEl && salaryEl) {
@@ -129,6 +147,16 @@
         }
       });
 
+      // Fade out images
+      if (studentPhotoEl) {
+        studentPhotoEl.style.opacity = "0";
+        studentPhotoEl.style.transition = "opacity 0.3s ease";
+      }
+      if (companyLogoEl) {
+        companyLogoEl.style.opacity = "0";
+        companyLogoEl.style.transition = "opacity 0.3s ease";
+      }
+
       setTimeout(() => {
         index = (index + 1) % testimonials.length;
 
@@ -136,6 +164,26 @@
         if (nameEl) nameEl.textContent = testimonials[index].name;
         if (roleEl) roleEl.textContent = testimonials[index].role;
         if (salaryEl) salaryEl.textContent = testimonials[index].salary;
+
+        // Update images
+        if (studentPhotoEl && testimonials[index].studentImage) {
+          studentPhotoEl.src = testimonials[index].studentImage;
+        }
+        if (companyLogoEl && testimonials[index].companyLogo) {
+          companyLogoEl.src = testimonials[index].companyLogo;
+        }
+
+        // Fade in images
+        if (studentPhotoEl) {
+          setTimeout(() => {
+            studentPhotoEl.style.opacity = "1";
+          }, 50);
+        }
+        if (companyLogoEl) {
+          setTimeout(() => {
+            companyLogoEl.style.opacity = "1";
+          }, 50);
+        }
 
         // move content to right (off-screen)
         elements.forEach(el => {
