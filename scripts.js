@@ -86,7 +86,7 @@
      const testimonials = [
   
     {
-      text: "The placement guidance and industry mentoring helped me secure my dream role with confidence. Leverage agile frameworks to provide a robust synopsis for go for strategy foster.",
+      text: "At MBU, I found mentors who believed in me even before I believed in myself. Their support and the learning environment made all the difference in my journey.",
       name: "Harshavika",
       role: "B.Tech Student",
       salary: "₹60 LPA",
@@ -94,7 +94,7 @@
       companyLogo: "image/yugabytedb.webp"
     },
     {
-      text: "Hands-on training and continuous placement support made a huge impact on my career growth. Leverage agile frameworks to provide a robust synopsis for go for strategy foster.",
+      text: "My experience at MBU was truly transformational. Every project, every lab session, and every mentor interaction helped me become industry-ready and confident.",
       name: "Vatsalya Polineni",
       role: "B.Tech Student",
       salary: "₹60 LPA",
