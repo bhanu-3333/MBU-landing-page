@@ -284,10 +284,10 @@ html, body {
     height: auto;
   }
   .text-content {
-    font-size: 26px;
+    font-size: 28px;
     line-height: 34px;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 
   .text-dark-emphasis {
@@ -315,6 +315,9 @@ html, body {
   .leader-img,
   .badge-years {
     margin-bottom: 30px;
+  }
+  .badge-years {
+    margin-left: 15%;
   }
   .container,
   .container-fluid {
@@ -574,7 +577,7 @@ right:70px;
     }
 
     .about-title {
-      font-size: 28px;
+      font-size: 34px;
       line-height: 36px;
     }
 
@@ -901,7 +904,7 @@ right:70px;
     }
 
     @media (max-width:768px){
-      .programs-title{font-size:1.6rem;}
+      .programs-title{font-size:34px;}
       
       .accordion-button{
         margin-top: 10px;
@@ -1414,7 +1417,7 @@ right:70px;
 
 @media (max-width: 768px) {
   .mbu-facilities-heading {
-    font-size: 22px;
+    font-size: 34px;
   }
 
   .mbu-img-box {
@@ -1837,7 +1840,7 @@ font-style: "semi-bold";
       }
 
       .faq-title {
-        font-size: 32px;
+        font-size: 34px;
         margin-bottom: 30px;
       }
 
@@ -1936,7 +1939,7 @@ font-style: "semi-bold";
       }
 
       .faq-title {
-        font-size: 24px;
+        font-size: 32px;
         margin-bottom: 20px;
       }
 
