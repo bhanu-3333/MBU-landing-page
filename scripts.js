@@ -16,6 +16,15 @@
       }
     });
 
+    // ---------- HERO BANNER: Scroll to hero section when Apply Now button clicked ----------
+    $('#mbuHeroBtn').on('click', function(e){
+      e.preventDefault();
+      const heroSection = document.getElementById('heroSection');
+      if (heroSection) {
+        heroSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+
     // fallback toggler (keeps behavior consistent)
     $('.navbar-toggler').on('click', function(){
       $('#mbuMenu').collapse('toggle');
