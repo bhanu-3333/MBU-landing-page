@@ -7,6 +7,15 @@
       $('#mbuMenu').collapse('hide');
     });
 
+    // ---------- NAV: Scroll to hero section when admissions button clicked ----------
+    $('#admissionsBtn').on('click', function(e){
+      e.preventDefault();
+      const heroSection = document.getElementById('heroSection');
+      if (heroSection) {
+        heroSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+
     // fallback toggler (keeps behavior consistent)
     $('.navbar-toggler').on('click', function(){
       $('#mbuMenu').collapse('toggle');
