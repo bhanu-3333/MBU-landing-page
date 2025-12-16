@@ -2147,7 +2147,7 @@ font-style: "semi-bold";
   }
 
   .mbuContactStrip .col-md-6:last-child {
-    padding-left: 90px;
+    padding-left: 80px;
     margin-top: 20px;
   }
 
@@ -2184,7 +2184,8 @@ font-style: "semi-bold";
   }
 
   .mbuMobileCenter img {
-    width: 150px !important;
+    width: 160px !important;
+    margin-right: 30px;
   }
 
   .mbuContactItem {
